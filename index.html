@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음씨앤씨 (Ieum C&C) | 공익과 교육의 미래를 잇는 솔루션 그룹</title>
+    <meta name="description" content="주식회사 이음씨앤씨(Ieum C&C)는 학교와 관공서를 위한 안전, 교육, 복지, 미디어 통합 공익 솔루션 그룹입니다. 시선추적 AI 문해력 진단(리드포스쿨), 생성형 AI 그림책(케이닷 아이그림), 스마트폰 자율 잠금(락킷), AI 재난예방·소화관제(에스솔루션), 전문 위생케어(허니비), 청각약자 배리어프리(텔레코일존), 지역 교육미디어(뉴스네) 등 5대 사업영역 맞춤 컨설팅을 제공합니다.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f2c59'/%3E%3Ctext x='50' y='63' font-size='34' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'%3E이음%3C/text%3E%3C/svg%3E">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Noto Sans KR & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#0f2c59',
+                            dark: '#0a192f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Top Global Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" onclick="resetFilter(); return false;" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-900 to-brand-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    이음
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl text-slate-900 tracking-tight leading-none">이음씨앤씨</span>
+                    <span class="text-xs text-brand-600 font-semibold tracking-wider uppercase mt-1">Ieum C&C</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="#about" class="hover:text-brand-600 transition-colors">회사소개</a>
+                <a href="#values" class="hover:text-brand-600 transition-colors">핵심가치</a>
+                <a href="#solutions" onclick="filterCategory('전체')" class="hover:text-brand-600 transition-colors">5대 솔루션</a>
+                <a href="#process" class="hover:text-brand-600 transition-colors">도입절차</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <button onclick="openInquiryModal()" class="px-4 py-2.5 rounded-xl bg-brand-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-800 shadow-md shadow-brand-900/10 transition-all flex items-center gap-2">
+                    <i class="fa-regular fa-paper-plane text-xs"></i>
+                    <span>도입 문의하기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="bg-gradient-to-b from-brand-900 via-brand-900 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
+            <div class="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-cyan-400 blur-3xl"></div>
+            <div class="w-full h-full" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 text-center sm:text-left">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-brand-100 text-xs sm:text-sm font-medium border border-white/15 backdrop-blur-md mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    공익과 교육을 위한 종합 컨설팅 미디어 솔루션
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    공익을 위한 혁신,<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-200 to-white">미래를 위한 책임</span>
+                </h1>
+                
+                <p class="text-slate-300 text-base sm:text-xl leading-relaxed mb-8 font-light">
+                    "더 나은 내일을 위해, 교육과 사회의 건강한 생태계를 디자인합니다."<br class="hidden sm:inline">
+                    주식회사 이음씨앤씨는 안전·교육·복지·미디어를 잇는 가치 중심 통합 솔루션 그룹입니다.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mb-10">
+                    <a href="#solutions" class="px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-lg shadow-brand-500/30 transition-all flex items-center gap-2">
+                        <span>5대 솔루션 살펴보기</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <button onclick="openInquiryModal()" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 backdrop-blur-md transition-all flex items-center gap-2">
+                        <i class="fa-regular fa-file-pdf text-xs"></i>
+                        <span>소개서 & 카탈로그 신청</span>
+                    </button>
+                </div>
+
+                <!-- Key Stat Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10 text-xs sm:text-sm">
+                    <div class="bg-white/5 rounded-xl p-4 border border-white/10 text-center sm:text-left">
+                        <div class="text-cyan-300 font-bold text-xl sm:text-2xl">5대 영역</div>
+                        <div class="text-slate-400 mt-1">맞춤형 통합 솔루션</div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 border border-white/10 text-center sm:text-left">
+                        <div class="text-cyan-300 font-bold text-xl sm:text-2xl">B2G / B2B</div>
+                        <div class="text-slate-400 mt-1">학교·관공서 전문</div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 border border-white/10 text-center sm:text-left">
+                        <div class="text-cyan-300 font-bold text-xl sm:text-2xl">100% 안심</div>
+                        <div class="text-slate-400 mt-1">검증된 브랜드 파트너</div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 border border-white/10 text-center sm:text-left">
+                        <div class="text-cyan-300 font-bold text-xl sm:text-2xl">상생 & 포용</div>
+                        <div class="text-slate-400 mt-1">사회적 책임 실천</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: Company Intro & Philosophy -->
+    <section id="about" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Company Philosophy</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    상생과 책임을 바탕으로 사회적 가치를 디자인합니다
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
+                    주식회사 이음씨앤씨는 우리 사회의 가장 본질적인 영역인 '교육'과 '공공성'의 가치를 높이는 데 전념하는 종합 컨설팅 그룹입니다.
+                </p>
+            </div>
+
+            <!-- Philosophy & Mission/Vision Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                <!-- Left: Corporate Philosophy Card -->
+                <div class="lg:col-span-7 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-brand-500/20 blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-base shadow-lg shadow-brand-500/30">
+                                이음
+                            </div>
+                            <div>
+                                <h3 class="font-extrabold text-xl text-white">경영 철학 (Corporate Philosophy)</h3>
+                                <p class="text-xs text-brand-300">주식회사 이음씨앤씨 (Ieum C&C)</p>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+                            우리는 상생과 책임을 기업의 존재 이유로 삼고, 단순한 기술이나 제품의 공급을 넘어 아이들이 안전하게 자랄 수 있는 학교 환경을 만들고, 소외되는 이 없이 모두가 소통할 수 있는 건강한 사회적 기반을 다지는 것을 소명으로 여깁니다.
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+                            첨단 AI 기술과 지능형 콘텐츠를 통해 미래 세대에게는 창의적이고 몰입감 있는 교육 환경을, 공공 현장에는 더 안전하고 스마트한 서비스를 제공하고자 합니다.
+                        </p>
+                    </div>
+
+                    <!-- Placeholder Image/Graphic Container (Ready for photo additions) -->
+                    <div class="mt-8 p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-xs text-slate-300 leading-relaxed italic">
+                            "우리는 하나의 가치 아래, 안전·혁신·복지·교육·미디어의 5대 영역에서 사회적 책임을 다하는 전문 브랜드들과 함께 통합 솔루션을 구축해 가고 있습니다."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Mission & Vision Cards -->
+                <div class="lg:col-span-5 flex flex-col gap-6 justify-between">
+                    <!-- Mission Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-4">
+                                🎯 미션 (Mission)
+                            </div>
+                            <h3 class="text-xl font-extrabold text-slate-900 mb-2">공공의 안전과 교육의 질적 향상</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                학교와 공공기관이 직면한 당면 과제(안전, 혁신, 복지, 소통)를 정확히 진단하고, 이를 해결할 수 있는 최적의 공익적 솔루션을 컨설팅하고 공급합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vision Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold mb-4">
+                                🚀 비전 (Vision)
+                            </div>
+                            <h3 class="text-xl font-extrabold text-slate-900 mb-2">가치 중심 통합 솔루션 그룹</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                대한민국 교육·공공 환경 개선을 선도하며 단순한 비즈니스를 넘어, 우리 사회의 지속 가능한 발전과 사회적 가치 실현에 기여하는 가장 신뢰받는 파트너가 됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Core Values Section -->
+    <section id="values" class="py-20 bg-slate-100/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Core Values</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    이음씨앤씨 4대 핵심 가치
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-3">
+                    공공·교육 전문 컨설팅 기업으로서 당사가 지향하는 확고한 4가지 지표입니다.
+                </p>
+            </div>
+
+            <!-- 4 Column Grid for Core Values -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Value 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">안전과 보호</h3>
+                    <p class="text-xs text-brand-600 font-semibold mb-2">Safety & Protection</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        화재 예방(에스솔루션), 스마트폰 과의존 방지(락킷), 깨끗한 위생 환경(허니비)을 통해 미래 세대가 가장 안심할 수 있는 공간을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">미래 교육과 혁신</h3>
+                    <p class="text-xs text-brand-600 font-semibold mb-2">Future Education</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        시선추적 AI(리드포스쿨) 및 생성형 AI(케이닷 아이그림)를 통해 교육의 질을 높이고 공평한 맞춤 배움의 기회를 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
+                        03
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">상생과 포용</h3>
+                    <p class="text-xs text-brand-600 font-semibold mb-2">Inclusion & Welfare</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        영유아 아동역량검사부터 취약계층 보청기 지원(텔레코일존)까지, 단 한 사람도 소외되지 않는 따뜻한 교육·복지 인프라를 실현합니다.
+                    </p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
+                        04
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">소통과 신뢰</h3>
+                    <p class="text-xs text-brand-600 font-semibold mb-2">Communication & Trust</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        지역 맞춤형 교육 미디어 플랫폼(뉴스네)을 통해 올바른 여론을 형성하고, 지역 사회와 교육 현장을 투명하게 연결합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 5 Big Solutions & Blog Cards Grid -->
+    <section id="solutions" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">5 Business Domains</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                이음씨앤씨 5대 핵심 솔루션
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-3">
+                학교와 관공서 현장에 필요한 검증된 전문 브랜드 솔루션을 탐색해 보세요.
+            </p>
+        </div>
+
+        <!-- Category Filter & Search Toolbar -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200">
+            <!-- Category Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="categoryTabs">
+                <button onclick="filterCategory('전체')" class="category-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-brand-900 text-white transition-all shadow-sm">
+                    전체 보기
+                </button>
+                <button onclick="filterCategory('스마트 교육 & AI')" class="category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    스마트 교육 & AI
+                </button>
+                <button onclick="filterCategory('디지털 청소년 보호')" class="category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    디지털 청소년 보호
+                </button>
+                <button onclick="filterCategory('안전 & 환경')" class="category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    안전 & 환경
+                </button>
+                <button onclick="filterCategory('포용 & 복지')" class="category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    포용 & 복지
+                </button>
+                <button onclick="filterCategory('미디어 & 소통')" class="category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    미디어 & 소통
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-72">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="솔루션 또는 키워드 검색..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+            </div>
+        </div>
+
+        <!-- Filter Status Message -->
+        <div id="filterStatus" class="mb-6 text-sm text-slate-500 font-medium hidden">
+            '<span id="currentCategoryText" class="text-brand-600 font-bold"></span>' 검색 결과입니다.
+        </div>
+
+        <!-- Full-width 3-column Grid for Solution Cards -->
+        <div id="postsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic Post Cards will be rendered via JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 p-8">
+            <i class="fa-regular fa-folder-open text-4xl text-slate-300 mb-3"></i>
+            <h3 class="text-base font-semibold text-slate-700">해당 조건의 솔루션 글이 없습니다</h3>
+            <p class="text-sm text-slate-500 mt-1">다른 검색어나 카테고리를 선택해 보세요.</p>
+            <button onclick="resetFilter()" class="mt-4 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold hover:bg-slate-200">전체보기로 돌아가기</button>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Introduction Process -->
+    <section id="process" class="py-20 bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/15">Step by Step Process</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">
+                    맞춤형 원스톱 도입 및 컨설팅 절차
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3">
+                    현장 진단부터 맞춤 설계, 안심 구축, 사후 LMS까지 체계적인 프로세스를 제공합니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center relative">
+                    <div class="w-10 h-10 rounded-full bg-cyan-500 text-slate-900 font-black text-sm flex items-center justify-center mx-auto mb-4">
+                        01
+                    </div>
+                    <h3 class="font-bold text-base text-white mb-2">현장 진단 및 상담</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        학교 및 관공서 현장의 특성과 당면 과제(안전, 과의존, 에듀테크)를 분석합니다.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center relative">
+                    <div class="w-10 h-10 rounded-full bg-cyan-500 text-slate-900 font-black text-sm flex items-center justify-center mx-auto mb-4">
+                        02
+                    </div>
+                    <h3 class="font-bold text-base text-white mb-2">맞춤 솔루션 설계</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        5대 사업 영역 중 가장 적합한 브랜드 제품과 사업 예산안 및 견적을 구성합니다.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center relative">
+                    <div class="w-10 h-10 rounded-full bg-cyan-500 text-slate-900 font-black text-sm flex items-center justify-center mx-auto mb-4">
+                        03
+                    </div>
+                    <h3 class="font-bold text-base text-white mb-2">안심 구축 및 현장 적용</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        전문 인력과 첨단 기술을 통해 차질 없이 정밀하게 세팅 및 시공을 완료합니다.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center relative">
+                    <div class="w-10 h-10 rounded-full bg-cyan-500 text-slate-900 font-black text-sm flex items-center justify-center mx-auto mb-4">
+                        04
+                    </div>
+                    <h3 class="font-bold text-base text-white mb-2">지속 지원 및 유지 관리</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        교용 LMS 대시보드 제공 및 전국 지점망 A/S를 통한 사후 관리를 보장합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Direct Contact Banner Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-slate-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+                <div class="max-w-2xl text-center md:text-left">
+                    <span class="inline-block text-xs font-bold px-3 py-1 bg-brand-500/30 text-cyan-200 rounded-full mb-3 border border-brand-400/30">B2G / B2B 전문 컨설팅</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">학교 및 관공서 맞춤형 제안서와 견적이 필요하신가요?</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-2 font-light">
+                        사업별 세부 카탈로그, 스펙 안내서, 무료 샘플 및 견적을 빠르게 전달해 드립니다.
+                    </p>
+                </div>
+                <div class="shrink-0 w-full sm:w-auto">
+                    <button onclick="openInquiryModal()" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-extrabold text-sm rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span>지금 솔루션 자료 신청하기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Article Modal Reader -->
+    <div id="articleModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden my-auto animate-in fade-in duration-200">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                <div class="flex items-center gap-2">
+                    <span id="modalCategoryBadge" class="px-2.5 py-1 rounded-full text-xs font-bold"></span>
+                    <span id="modalBrandBadge" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-200 text-slate-700"></span>
+                </div>
+                <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-white hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Content Body -->
+            <div class="p-6 sm:p-8 overflow-y-auto flex-1 space-y-6 text-slate-800">
+                <div>
+                    <h2 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug"></h2>
+                    <div class="flex items-center gap-4 text-xs text-slate-400 mt-3 pt-3 border-t border-slate-100">
+                        <span><i class="fa-regular fa-clock mr-1"></i> <span id="modalReadTime"></span></span>
+                        <span><i class="fa-regular fa-building mr-1"></i> 주식회사 이음씨앤씨 파트너 솔루션</span>
+                    </div>
+                </div>
+
+                <!-- Text Banner Badge -->
+                <div id="modalGraphicBanner" class="p-6 rounded-2xl text-white flex flex-col justify-between shadow-inner">
+                    <span id="modalGraphicIcon" class="text-3xl mb-2"></span>
+                    <p id="modalGraphicSubtitle" class="text-sm font-medium opacity-90"></p>
+                </div>
+
+                <!-- Rich Text Content -->
+                <div id="modalBody" class="prose prose-slate max-w-none text-sm sm:text-base leading-relaxed space-y-4">
+                    <!-- Content injected via JS -->
+                </div>
+
+                <!-- Solution Highlights Box -->
+                <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-brand-600"></i>
+                        <span>핵심 기대 효과 및 도입 포인트</span>
+                    </h4>
+                    <ul id="modalHighlights" class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                        <!-- Items injected via JS -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 sm:p-6 border-t border-slate-100 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <span class="text-xs text-slate-500">학교 및 관공서 도입 상담 및 무료 자료 제공</span>
+                <button onclick="closeArticleModal(); openInquiryModal();" class="w-full sm:w-auto px-5 py-2.5 bg-brand-900 text-white font-semibold text-xs rounded-xl hover:bg-brand-800 transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>이 솔루션 도입 문의하기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Inquiry Modal -->
+    <div id="inquiryModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-auto">
+            <button onclick="closeInquiryModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <div class="mb-6">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-50 text-brand-700 text-xs font-bold mb-2">
+                    <i class="fa-solid fa-headset"></i> B2G / B2B 맞춤 상담
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">솔루션 도입 및 제휴 문의</h3>
+                <p class="text-xs text-slate-500 mt-1">문의 사항을 남겨주시면 담당 전문가가 신속히 연락드립니다.</p>
+            </div>
+
+            <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">담당자명 *</label>
+                        <input type="text" required placeholder="홍길동" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">연락처 *</label>
+                        <input type="tel" required placeholder="010-0000-0000" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">기관/학교/기업명 *</label>
+                        <input type="text" required placeholder="예: 서울OO초등학교, OO구청, OO도서관" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">지역 *</label>
+                        <input type="text" required placeholder="예: 서울 강남구, 경기 성남시" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- 2-Step Cascading Solution Category & Product Select -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">솔루션 분야 (대분류) *</label>
+                        <select id="solutionCategory" required onchange="handleCategoryChange()" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none bg-white">
+                            <option value="">분야를 선택해주세요</option>
+                            <option value="스마트 교육 & AI">스마트 교육 & AI</option>
+                            <option value="디지털 청소년 보호">디지털 청소년 보호</option>
+                            <option value="안전 & 환경">안전 & 환경</option>
+                            <option value="포용 & 복지">포용 & 복지</option>
+                            <option value="미디어 & 소통">미디어 & 소통</option>
+                            <option value="기타 / 종합 컨설팅">기타 / 종합 컨설팅</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">세부 제품/솔루션 (소분류) *</label>
+                        <select id="solutionProduct" required class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none bg-white">
+                            <option value="">대분류를 먼저 선택해주세요</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">문의 내용</label>
+                    <textarea rows="3" placeholder="필요 수량, 도입 예정 시기 등 문의 사항을 간단히 작성해주세요." class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3 bg-brand-900 text-white font-bold text-xs rounded-xl hover:bg-brand-800 transition-colors shadow-md">
+                        상담 및 자료 신청 완료하기
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Notification State inside Modal -->
+            <div id="inquirySuccess" class="hidden text-center py-8 space-y-3">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mx-auto">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="font-bold text-base text-slate-900">문의가 정상 접수되었습니다!</h4>
+                <p class="text-xs text-slate-500">담당자가 확인 후 입력해주신 연락처로 24시간 이내 연락을 드리겠습니다.</p>
+                <button onclick="closeInquiryModal()" class="mt-4 px-5 py-2 bg-slate-800 text-white text-xs font-semibold rounded-lg">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+                <!-- Brand Info -->
+                <div class="md:col-span-5 space-y-3">
+                    <div class="flex items-center gap-2 text-white font-extrabold text-base">
+                        <span class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs">이음</span>
+                        주식회사 이음씨앤씨 (Ieum C&C)
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        공익을 위한 혁신, 미래를 위한 책임.<br>
+                        교육과 사회의 건강한 생태계를 디자인하는 공공·교육 전문 통합 솔루션 그룹입니다.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-3 space-y-2">
+                    <h4 class="text-white font-bold mb-3">5대 핵심 사업 영역</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="#solutions" onclick="filterCategory('스마트 교육 & AI')" class="hover:text-white transition-colors">스마트 교육 & AI (리드포스쿨 / K·AI Grimm)</a></li>
+                        <li><a href="#solutions" onclick="filterCategory('디지털 청소년 보호')" class="hover:text-white transition-colors">디지털 청소년 보호 (락킷)</a></li>
+                        <li><a href="#solutions" onclick="filterCategory('안전 & 환경')" class="hover:text-white transition-colors">안전 & 환경 (에스솔루션 / 허니비)</a></li>
+                        <li><a href="#solutions" onclick="filterCategory('포용 & 복지')" class="hover:text-white transition-colors">포용 & 복지 (텔레코일존)</a></li>
+                        <li><a href="#solutions" onclick="filterCategory('미디어 & 소통')" class="hover:text-white transition-colors">미디어 & 소통 (뉴스네)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="md:col-span-4 space-y-2">
+                    <h4 class="text-white font-bold mb-3">고객 지원 및 오시는 길</h4>
+                    <p><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> 주식회사 이음씨앤씨 (Ieum C&C)</p>
+                    <p><i class="fa-solid fa-envelope text-slate-500 mr-1.5"></i> 공식 문의: contact@ieumcnc.com</p>
+                    <p><i class="fa-solid fa-phone text-slate-500 mr-1.5"></i> 대표전화: 1588-0000 (평일 09:00~18:00)</p>
+                    <p><i class="fa-solid fa-shield-halved text-slate-500 mr-1.5"></i> 관공서·학교 수의계약 및 맞춤 도입 컨설팅</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
+                <p>© 2026 주식회사 이음씨앤씨 (Ieum C&C). All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-slate-300">개인정보처리방침</a>
+                    <a href="#" class="hover:text-slate-300">이용약관</a>
+                    <a href="#" class="hover:text-slate-300">이메일무단수집거부</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Complete, verified posts data structure
+        const POSTS_DATA = [
+            {
+                id: 'read-for-school',
+                category: '스마트 교육 & AI',
+                brand: '리드포스쿨 (READ for School)',
+                title: '시선 추적 AI 기반 문해력 진단·증진 코스웨어, 리드포스쿨',
+                subtitle: '별도 장비 없이 스마트기기 카메라로 시선을 분석하여 개인별 맞춤 독해 훈련을 제공하는 혁신 에듀테크',
+                excerpt: '전국 300여 개 학교 도입! 온디바이스 시선추적(Eye-Tracking) 기술로 학생의 읽기 습관과 독해 패턴을 정밀 진단하고, 4단계 AI 맞춤형 훈련 코스와 교사용 LMS를 통해 문해력을 획기적으로 향상시킵니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-emerald-600 via-teal-700 to-slate-900',
+                icon: '👁️',
+                categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">대통령 표창</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">2024 정보문화의 달</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">CES 혁신상</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">2022·2023 2년 연속</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">300+ 학교</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">전국 초·중·고 구축</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">시선 추적 AI</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">별도 장비 0개 (HW 불필요)</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            디지털 기기와 숏폼 영상에 익숙해진 미래 세대의 독해력 및 문해력 저하는 최근 교실 현장의 가장 심각한 교육 과제로 대두되고 있습니다. ㈜비주얼캠프의 <strong>리드포스쿨(READ for School)</strong>은 카메라만으로 학생의 눈동자 움직임을 추적하는 독보적 <em>모바일 시선 추적(Mobile Eye-Tracking) 기술</em>과 <em>AI 코스웨어</em>를 결합하여, 학생의 읽기 습관을 과학적으로 분석하고 개인별 맞춤 문해력 훈련을 제공하는 혁신 에듀테크 솔루션입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-eye text-emerald-600"></i>
+                                <span>리드포스쿨(READ for School)의 4대 핵심 기술 및 특징</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-emerald-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>하드웨어 필요 없는 온디바이스 모바일 시선 추적</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    적외선 카메라나 별도 센서 장비 없이, 학교에 보유된 태블릿PC, 스마트폰, 노트북, 크롬북의 기본 웹캠만으로 정밀하게 시선을 분석합니다 (1.55° 오차 이내). 모든 OS 및 웹 브라우저를 완벽하게 지원합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-teal-100 bg-teal-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-teal-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-teal-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>4대 시선 데이터 기반 과학적 문해력 정밀 진단 (RoCAT & ACLA)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    역행 비율(되돌아 읽는 습관), 시선 고정 시간, 독해 속도, 시폭(한번에 보는 글자수) 등 4대 핵심 지표를 정밀 측정합니다. EBS 계약 지문과 컴퓨터 적응형 테스트(CAT) 기법을 활용합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-cyan-100 bg-cyan-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-cyan-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-cyan-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>체계적인 4단계 맞춤 훈련 모듈 & AI 튜터 피드백</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    [지문 읽기 ➔ 어휘 학습 ➔ 객관식/추론 문제 풀이 ➔ AI 튜터 피드백]으로 이어지는 선순환 구조를 제공하며, AI 튜터가 요약문 및 서술형 답변을 실시간 교정합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>교사용 LMS & 지문 업로드 시 AI 문제 자동 생성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    LMS 대시보드로 학생별 시선 패턴(Gaze Pattern)과 학습 성과를 시각적으로 확인하며, 교사가 단원 지문 입력 시 AI가 맞춤형 문제를 자동 생성합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">국내 최고 대학 교수진 공동 연구 및 교육 효과 실증</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">서울대학교 교육심리학과</div>
+                                    <div class="font-bold text-slate-800">신종호 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">학습자의 읽기 습관, 시선패턴, 이해도 분석 및 피드백 체계 구축</p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">한양대학교 국어교육과</div>
+                                    <div class="font-bold text-slate-800">조병영 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">시선데이터 및 독해검사 데이터 기반 맞춤형 학습 시스템 구현</p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">이화여자대학교 국어교육과</div>
+                                    <div class="font-bold text-slate-800">서혁 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">콘텐츠 검수, 학년별/난이도별 지문 및 문제 세트 훈련 배치</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-chart-line text-emerald-400"></i>
+                                <span>경남 지역 중학교 3개월 실증 결과 정답률 평균 15% 증가 입증 & 전국 300여 개 학교 구축</span>
+                            </span>
+                            <span class="text-emerald-400 font-bold">검증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '별도 하드웨어 없이 모바일/태블릿/PC 카메라만으로 온디바이스 시선추적(Eye-Tracking) 구현',
+                    '2024 정보문화의 달 대통령 표창 & CES 혁신상 2년 연속 수상으로 검증된 독보적 기술력',
+                    '시선 데이터(역행 비율, 고정 시간, 독해 속도, 시폭) 기반 4단계 AI 문해력 진단 및 맞춤 훈련',
+                    'EBS 계약 지문 기반 RoCAT 진단 및 교사 직접 지문 업로드 시 AI 문제 자동 생성 커리큘럼',
+                    '서울대·한양대·이화여대 교수진 공동 연구 및 전국 300여 개 학교 실증 완료 (정답률 15% 상승)'
+                ]
+            },
+            {
+                id: 'k-aigrimm',
+                category: '스마트 교육 & AI',
+                brand: '케이닷 아이그림 (K·AI Grimm)',
+                title: '상상을 현실로 만드는 생성형 AI 동화책 제작 솔루션, 케이닷 아이그림',
+                subtitle: '키워드와 시나리오 입력으로 완성하는 나만의 AI 그림책 창작 플랫폼 (특허 보유)',
+                excerpt: '어린이의 상상력과 표현력을 극대화하는 생성형 AI 동화책 제작 솔루션! 키워드 및 이야기 시나리오 입력만으로 다채로운 분위기와 시점의 그림을 자동 생성하고, 편집 및 스마트 출판까지 지원합니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-indigo-600 via-purple-700 to-slate-900',
+                icon: '🎨',
+                categoryColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">특허 보유</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">제 10-2611923 호</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">생성형 AI</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">딥러닝 기반 이미지 연동</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">Cross-Dev</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">PC·스마트폰·태블릿</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">국내 최초</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">세종시립도서관 AI창작소</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            디지털 미래 교육 현장과 공공도서관에서는 단순한 수동적 독서를 넘어, 아이들이 능동적으로 창작에 참여하는 창의적 융합 교육의 요구가 커지고 있습니다. ㈜채움씨앤아이의 <strong>케이닷 아이그림(K·AI Grimm)</strong>은 어린이와 이용자가 직접 작성한 키워드와 시나리오를 바탕으로 인공지능이 고품질 그림책을 자동 생성해주는 <em>특허 등록 생성형 AI 동화책 제작 솔루션</em>입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-600"></i>
+                                <span>케이닷 아이그림(K·AI Grimm)의 4대 혁신 기능 및 경쟁력</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-indigo-100 bg-indigo-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-indigo-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>키워드 & 시나리오 기반 맞춤 AI 그림 생성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    어린이가 입력한 짧은 키워드나 시나리오 문맥을 AI가 정확하게 해석하여 원하는 예술 화풍, 분위기, 캐릭터의 다양한 시점을 반영한 완벽한 컷 이미지를 구현합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-purple-100 bg-purple-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>자유로운 내용 편집 및 스마트 레이아웃 구성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    AI가 그린 이미지와 텍스트 배치를 자유롭게 수정하고 폰트 크기, 문단 구성, 페이지 레이아웃을 몇 번의 클릭으로 조율하여 세공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-sky-100 bg-sky-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-sky-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>스마트 기기 멀티 플랫폼(Cross-Platform) 지원</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    무거운 프로그램 설치 없이 Web 기반으로 작동하며 태블릿, PC, 스마트폰 등 다양한 디바이스 환경에서 최적화된 화면을 제공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>갤러리 형태의 완성작 관리 & 디지털 라이브러리</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    완성된 동화책은 갤러리 형태로 조회할 수 있으며 PDF 저장, E-Book 공유, 실물 책자 제본 연계 활동을 지원합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-award text-purple-400"></i>
+                                <span>국내 공공도서관 최초 세종시립도서관 '아이(AI) 창작소' 적용 및 독서 창작 실증 완료</span>
+                            </span>
+                            <span class="text-purple-300 font-bold">검증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '생성형 AI 기반 그림책 자동 제작 특허 보유 (특허 제 10-2611923 호)',
+                    '어린이의 시나리오/키워드로 다양한 화풍과 시점의 고품질 그림 연출',
+                    'PC, 스마트폰, 태블릿 등 멀티 디바이스 반응형 웹 서비스 지원',
+                    '세종시립도서관 "아이(AI) 창작소" 등 전국 공공도서관 및 스마트 학교 공식 도입',
+                    '갤러리 방식의 편리한 앨범 관리, 문서 PDF 및 실물 책자 제본 확장 지원'
+                ]
+            },
+            {
+                id: 'lockit',
+                category: '디지털 청소년 보호',
+                brand: '락킷 (Lockit)',
+                title: '수업 몰입도를 높이는 스마트폰 자율 잠금 파우치, 락킷(Lockit)',
+                subtitle: '방해는 잠그고, 집중은 열다 — 전파 차단 & 특수 자석 잠금 2 in 1 공간 집중 솔루션',
+                excerpt: '디지털 기기 과의존과 교실 내 무단 사용을 완벽 차단! 강제 수거 및 분실·파손 위험 없이, 학생 자율 소지 잠금 파우치와 전용 태그 해제기로 수업 몰입과 디지털 디톡스를 실현합니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-blue-700 via-indigo-800 to-slate-900',
+                icon: '📱',
+                categoryColor: 'bg-blue-100 text-blue-800 border-blue-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-blue-400 font-black text-lg sm:text-xl">2 in 1</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">자석잠금 + 전파차단</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-blue-400 font-black text-lg sm:text-xl">100%</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">국내 원단 & 제조</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-blue-400 font-black text-lg sm:text-xl">1초 해제</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">휴대용 자석 해제기</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-blue-400 font-black text-lg sm:text-xl">0% 리스크</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">분실·파손 책임 소지 방지</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            교실 내 스마트폰 관리는 교사의 과도한 행정 부담과 학생 간 마찰, 분실·파손 시 책임 소재 문제로 오랜 시간 난제로 남아있었습니다. <strong>락킷(LOCKIT)</strong>은 스마트폰을 억지로 수거하여 보관함에 넣는 일방적 압수 방식에서 벗어나, 학생 스스로 기기를 안전하게 잠그고 자율적으로 소지하며 수업에 온전히 집중할 수 있도록 돕는 <em>혁신적인 공간 집중 에듀테크 솔루션</em>입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group text-blue-600"></i>
+                                <span>락킷(LOCKIT)의 4대 특장점 & 기술 경쟁력</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-blue-100 bg-blue-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-blue-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>전파 차단 + 원터치 자동 자석 잠금 (2 in 1)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    파우치를 닫는 순간 자석이 자동 잠기며, 특수 안감 소재가 LTE/5G/Wi-Fi/Bluetooth 전파를 차단하여 진동이나 알림음 발생을 차단합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-indigo-100 bg-indigo-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-indigo-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>교사용 휴대용 전용 해제기 (Unlocking Base)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    선생님이 휴대하는 전용 마그네틱 해제기를 태그하면 1초 만에 해제되며 무전원 방식으로 고장이 없습니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-sky-100 bg-sky-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-sky-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>100% 국내 생산 원단 & 맞춤형 로고 커스텀</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    국내 원단과 가공으로 높은 내구성을 자랑하며, 학교별 교색 및 로고 프린팅 커스텀 제작을 지원합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>분실 및 파손 위험 Zero (학생 자율 소지)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    수거함 보관 시 발생하는 기기 섞임과 파손 분쟁을 완전히 해소하며 학생이 파우치에 넣은 상태로 본인이 관리합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-cyan-400"></i>
+                                <span>전국 초·중·고 교내 스마트폰 관리 법안 부합 및 시험장·공연장·기업 보안구역 확장</span>
+                            </span>
+                            <span class="text-blue-400 font-bold">인증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '강제 수거 없는 자율 소지 잠금 방식으로 학생 인권 및 분실·파손 위험 최소화',
+                    '특수 자석 잠금장치 + 전파(5G/LTE/Wi-Fi) 차단 2 in 1 특허 기술',
+                    '선생님이 간편히 휴대 가능한 전용 무전원 자석 해제기로 1초 만에 잠금 해제',
+                    '100% 국내 원단 및 국내 생산으로 우수한 품질과 학교별 로고 맞춤 제작 지원',
+                    '수업 몰입도 및 학생·교사간 신뢰도 대폭 증가 효과 검증'
+                ]
+            },
+            {
+                id: 's-solution',
+                category: '안전 & 환경',
+                brand: '에스솔루션 (S-Solution)',
+                title: 'AI 기반 재난 예방 & 원격 소화 통합 관제, 에스솔루션',
+                subtitle: '기술로 생명과 재산을 보호하는 AI 재난 안전 선도 솔루션',
+                excerpt: '전기차·배터리 화재부터 지하 기계전기실 물넘침, 분리수거장, 건설현장 재난까지! AI 조기 감지 및 원격 자동 소화, 24시간 통합 관제로 골든타임을 완벽하게 사수합니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-red-600 via-rose-800 to-slate-900',
+                icon: '🚨',
+                categoryColor: 'bg-red-100 text-red-800 border-red-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-rose-400 font-black text-lg sm:text-xl">AI 감지</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">비전·열화상 조기 탐지</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-rose-400 font-black text-lg sm:text-xl">원격 소화</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">자동 연동 진압 시스템</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-rose-400 font-black text-lg sm:text-xl">24/7 관제</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">PC·스마트폰 실시간 알림</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-rose-400 font-black text-lg sm:text-xl">맞춤형</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">현장 특화 안전 컨설팅</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            학교, 관공서, 아파트, 공장 등 현대 시설물의 재난은 대형 참사로 이어질 수 있어 사전 예방과 초동 조치가 중요합니다. <strong>(주)에스솔루션(S-Solution)</strong>은 독자적인 AI 조기 감지 기술과 원격 소화, 스마트 통합 관제를 결합하여 재난 골든타임을 사수하는 <em>AI 재난 안전 솔루션 선도기업</em>입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-cat text-rose-600"></i>
+                                <span>에스솔루션 5대 AI 재난 안전 핵심 솔루션</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-rose-100 bg-rose-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-rose-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-rose-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>전기차 화재 AI 감지 & 원격소화 관제</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    지하주차장 및 건물 내 전기차 충전 구역의 온습도, 열화상, 연기/불꽃을 AI 비전으로 실시간 분석하고 과열 감지 즉시 원격 소화 장치를 작동시킵니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-red-100 bg-red-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-red-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-red-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>배터리 화재 AI 조기감지 & 원격소화 통합관제</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    ESS 및 배터리 시설의 열폭주 위험을 초기 단계에서 탐지하고 오작동을 최소화하는 지능형 소화 연동 시스템을 구동합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-amber-100 bg-amber-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-amber-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>분리수거장 화재 AI 감지 & 원격소화 관제</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    가연성 물질이 밀집된 분리수거장의 무단 투기, 불씨, 자연 발화 위험을 AI 카메라로 24시간 모니터링합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-blue-100 bg-blue-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-blue-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-blue-600 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>지하 기계전기실 화재 & 저수조 물넘침 원격제어</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    지하 기계실·전기실의 화재 징후 및 저수조 누수·물넘침 수위를 감지하여 원격 밸브 제어 및 실시간 상황 알림을 제공합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-rose-400"></i>
+                                <span>학교, 관공서, 아파트, 공장, 건설현장 등 현장 맞춤형 재난 예방 기술인증 완료</span>
+                            </span>
+                            <span class="text-rose-400 font-bold">인증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    'AI 비전 & 열화상 센서 기반 화재 및 재난 이상 징후 실시간 조기 감지',
+                    '전기차 충전구역, 배터리실, 분리수거장 특화 원격/자동 소화 연동 시스템',
+                    '지하 기계전기실 화재 및 저수조 물넘침·누수 원격 제어 및 모니터링',
+                    '산업·건설 현장 중대재해 예방을 위한 작업자 위험 감지 및 통합 경보',
+                    '스마트폰 및 PC 전용 통합 관제망 구축을 통한 24시간 실시간 무인 관제'
+                ]
+            },
+            {
+                id: 'honeybee',
+                category: '안전 & 환경',
+                brand: '허니비 (Honeybee)',
+                title: '위생적이고 쾌적한 학교·기관 전문 케어 클리닝',
+                subtitle: '10년 경력의 전문가와 최신 첨단 장비로 구현하는 대한민국 대표 친환경 청정·특수 케어',
+                excerpt: '전국 지점망과 10년 이상 경력의 전문가 집단! 에어컨 완전분해 세척부터 교실/급식실 친환경 클리닝, 바닥 코팅, 화재/재난 특수 복구까지 종합 청정 케어 솔루션을 제공합니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-emerald-700 via-teal-800 to-cyan-900',
+                icon: '🐝',
+                categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">10년+</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">베테랑 전문가 집단</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">전국 망</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">전국 표준화 케어</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">24시간</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">긴급 대응/출동 체계</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">100%</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">현장 직접 검수제</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            아이들과 시민들이 매일 숨 쉬고 머무르는 교육·공공 공간은 단순한 청소를 넘어 수준 높은 위생 관리가 필요합니다. <strong>허니비(HONEYBEE)</strong>는 10년 이상 경력의 전문가들과 첨단 기계 장비를 바탕으로 전국 관공서 및 학교에 안심 환경을 선도하는 종합 특수 청소 전문 기업입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-list-check text-emerald-600"></i>
+                                <span>허니비 5대 핵심 사업부 및 전문 서비스</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-emerald-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>에어컨·냉난방기 사업부 (완전 분해 세척)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    교실, 강당, 관공서 에어컨을 완전 분해하여 고압 세척 및 고온 스팀 소독으로 유해 세균을 99.9% 차단합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-teal-100 bg-teal-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-teal-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-teal-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>홈케어 & 교육·공공시설 케어 사업부</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    급식실, 교실, 체육관 준공·정기 클리닝, 소파/매트리스 딥클리닝, 방충망 교체 등 위생 케어를 제공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-cyan-100 bg-cyan-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-cyan-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-cyan-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>프리미엄 나노코팅 & 바닥 특수 케어</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    복도 및 강당 바닥 왁스코팅, 타일 박리 세척 및 나노코팅으로 시설물 내구성을 극대화합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-rose-100 bg-rose-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-rose-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-rose-600 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>화재·재난 복구 & 특수청소 사업부</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    화재/침수 시 24시간 긴급 출동하여 그을음 제거, 유독가스 탈취, 고층 외창 세척 및 보험 처리를 대행합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-trophy text-amber-400"></i>
+                                <span>청와대 외벽 청소 진행 등 국가·기관 프로젝트 실증 레퍼런스 보유</span>
+                            </span>
+                            <span class="text-emerald-400 font-bold">검증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '전국 지점망 운영으로 신속한 출동 및 표준화된 서비스 품질 제공',
+                    '10년 이상 경력의 전문가 집단 & 첨단 최신 기계 장비 보유',
+                    '에어컨 완전분해 세척부터 급식실, 교실, 강당 바닥 왁스코팅까지 지원',
+                    '화재·침수 재난 시 24시간 긴급 특수 청소 및 손해사정 연계',
+                    '현장 담당자 직접 검수제 및 확실한 사후 A/S 시스템 준수'
+                ]
+            },
+            {
+                id: 'smart-hama',
+                category: '스마트 교육 & AI',
+                brand: '똑똑한 하마 / 아동역량검사',
+                title: 'AI 기반 데이터 진단과 맞춤형 창의 융합 에듀테크',
+                subtitle: '아이들의 숨겨진 잠재력을 발견하는 지능형 교육 솔루션',
+                excerpt: '저학년 대상 창의 융합 교구재와 AI 데이터 기반 역량 진단 도구를 통해 교육 격차를 해소하고 미래 인재를 양성하는 스마트 교육 파트너입니다.',
+                readTime: '4분 읽기',
+                gradient: 'from-amber-500 to-orange-700',
+                icon: '🧩',
+                categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
+                body: `
+                    <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
+                    <p class="text-sm text-slate-600 mt-2"><strong>아동역량검사 & 똑똑한 하마</strong>는 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단합니다. 단순한 정답 맞추기가 아닌, 탐구력·문제해결력·융합적 사고를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
+                    <h3 class="text-sm font-bold text-slate-900 mt-4 mb-2">주요 교육 가치</h3>
+                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
+                        <li><strong>정밀 데이터 리포트:</strong> 객관적 진단 데이터로 교사와 학부모에게 맞춤 가이드 제공.</li>
+                        <li><strong>교육 격차 해소:</strong> 기초 학력 미달 예방 및 학생별 흥미 기반 맞춤 배움 지원.</li>
+                        <li><strong>창의 융합 교구:</strong> 손으로 직접 만들고 체험하는 오감 만족 에듀테크 콘텐츠.</li>
+                    </ul>
+                `,
+                highlights: [
+                    '초등 저학년 맞춤형 역량 진단 알고리즘 적용',
+                    '교육청 및 유치원·초등학교 활용성 우수',
+                    '교사용 학생 관리 통합 데이터보드 제공'
+                ]
+            },
+            {
+                id: 'telecall',
+                category: '포용 & 복지',
+                brand: '텔레코일존',
+                title: '청각 약자를 위한 배리어 프리(Barrier-Free) 보청 보조기기',
+                subtitle: '소음 속에서도 명확한 소리를 전달하는 무장애 소통 인프라',
+                excerpt: '청각 장애인 및 고령자가 관공서, 민원실, 교육장에서 명확하게 음성을 청취할 수 있도록 지원하는 텔레코일 존 인프라 솔루션입니다.',
+                readTime: '3분 읽기',
+                gradient: 'from-purple-600 to-indigo-900',
+                icon: '👂',
+                categoryColor: 'bg-purple-100 text-purple-800 border-purple-200',
+                body: `
+                    <p class="font-semibold text-slate-900">단 한 사람도 사회적 소통에서 소외되지 않는 따뜻한 세상을 만듭니다.</p>
+                    <p class="text-sm text-slate-600 mt-2"><strong>텔레코일존</strong>은 보청기나 인공와우를 착용한 사용자가 주변 소음 없이 안내 방송이나 선생님·창구 담당자의 목소리를 자기 보청기로 직접 깨끗하게 들을 수 있도록 돕는 무선 음성 전송 시스템입니다.</p>
+                `,
+                highlights: [
+                    '공공기관 및 학교 민원실 배리어 프리 의무화 지원',
+                    '주변 웅성거림 및 울림 현상 제거 후 순수 음성 전송',
+                    '국제 표준 규격 준수 인프라 구축'
+                ]
+            },
+            {
+                id: 'newsne',
+                category: '미디어 & 소통',
+                brand: '뉴스네 (교육미래뉴스)',
+                title: '지역 교육 현안을 투명하게 연결하는 공익 미디어 플랫폼',
+                subtitle: '올바른 여론 형성과 교육 현장의 목소리를 대변하는 가교',
+                excerpt: '지역별 맞춤형 교육 이슈, 정책 제안, 학교 소식을 신속하고 공정하게 전달하는 인터넷 언론·신문 미디어 플랫폼입니다.',
+                readTime: '3분 읽기',
+                gradient: 'from-cyan-600 to-slate-800',
+                icon: '📰',
+                categoryColor: 'bg-cyan-100 text-cyan-800 border-cyan-200',
+                body: `
+                    <p class="font-semibold text-slate-900">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다.</p>
+                    <p class="text-sm text-slate-600 mt-2"><strong>뉴스네([지역]교육미래뉴스)</strong>는 교육 현장의 생생한 현장 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 생생하게 다루는 공익 미디어입니다.</p>
+                `,
+                highlights: [
+                    '지역 맞춤형 교육 뉴스 특화 보도',
+                    '교육청 및 지방자치단체 교육 소식 실시간 연계',
+                    '투명한 정보 공유로 교육 공동체 신뢰 구축'
+                ]
+            }
+        ];
+
+        // Cascading Dropdown Options
+        const PRODUCTS_BY_CATEGORY = {
+            '스마트 교육 & AI': [
+                '리드포스쿨 (READ for School 시선추적 AI 문해력 코스웨어)',
+                '케이닷 아이그림 (K·AI Grimm 생성형 AI 그림책)',
+                '아동역량검사 / 똑똑한 하마 (AI 기반 맞춤 진단)'
+            ],
+            '디지털 청소년 보호': [
+                '락킷 (Lockit 스마트폰 자율 잠금 파우치)'
+            ],
+            '안전 & 환경': [
+                '에스솔루션 (S-Solution AI 재난예방&소화관제)',
+                '허니비 (Honeybee 학교·기관 전문 케어 클리닝)'
+            ],
+            '포용 & 복지': [
+                '텔레코일존 (청각 약자 배리어 프리 보청 보조기기)'
+            ],
+            '미디어 & 소통': [
+                '뉴스네 (지역 교육미래뉴스 미디어 플랫폼)'
+            ],
+            '기타 / 종합 컨설팅': [
+                '종합 컨설팅 / 기타 문의'
+            ]
+        };
+
+        // State variables
+        let currentCategory = '전체';
+        let currentSearchQuery = '';
+
+        // Render Blog Post Cards
+        function renderPosts() {
+            const container = document.getElementById('postsContainer');
+            const emptyState = document.getElementById('emptyState');
+            const filterStatus = document.getElementById('filterStatus');
+            const currentCatText = document.getElementById('currentCategoryText');
+
+            if (!container) return;
+
+            // Filter logic
+            const filtered = POSTS_DATA.filter(post => {
+                const matchesCat = currentCategory === '전체' || post.category === currentCategory;
+                const matchesSearch = !currentSearchQuery || 
+                    post.title.toLowerCase().includes(currentSearchQuery.toLowerCase()) ||
+                    post.brand.toLowerCase().includes(currentSearchQuery.toLowerCase()) ||
+                    post.excerpt.toLowerCase().includes(currentSearchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            // Status indicator
+            if (currentCategory !== '전체' || currentSearchQuery) {
+                filterStatus.classList.remove('hidden');
+                currentCatText.textContent = currentSearchQuery ? `"${currentSearchQuery}" 검색어` : currentCategory;
+            } else {
+                filterStatus.classList.add('hidden');
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            // Render html
+            container.innerHTML = filtered.map(post => `
+                <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold ${post.categoryColor}">
+                                    ${post.category}
+                                </span>
+                                <span class="text-xs text-slate-400 font-medium">
+                                    <i class="fa-regular fa-clock mr-1"></i>${post.readTime}
+                                </span>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-gradient-to-r ${post.gradient} text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform">
+                                <span class="text-3xl mb-1 block">${post.icon}</span>
+                                <div class="font-bold text-sm tracking-wide opacity-95">${post.brand}</div>
+                            </div>
+
+                            <h3 class="text-base font-bold text-slate-900 group-hover:text-brand-600 transition-colors line-clamp-2 leading-snug">
+                                ${post.title}
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-2 line-clamp-3 leading-relaxed">
+                                ${post.excerpt}
+                            </p>
+                        </div>
+
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-brand-600 group-hover:underline flex items-center gap-1">
+                                상세보기 및 사례 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </span>
+                            <button onclick="openArticleModal('${post.id}')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-brand-900 hover:text-white text-slate-700 text-xs font-semibold transition-colors">
+                                자세히 보기
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // Filter by Category
+        function filterCategory(category) {
+            currentCategory = category;
+            
+            // Update Active Buttons
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.trim().includes(category)) {
+                    btn.className = 'category-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-brand-900 text-white transition-all shadow-sm';
+                } else {
+                    btn.className = 'category-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all';
+                }
+            });
+
+            renderPosts();
+        }
+
+        // Search Handler
+        function handleSearch() {
+            const input = document.getElementById('searchInput');
+            currentSearchQuery = input.value.trim();
+            renderPosts();
+        }
+
+        // Reset Filter
+        function resetFilter() {
+            currentCategory = '전체';
+            currentSearchQuery = '';
+            const input = document.getElementById('searchInput');
+            if (input) input.value = '';
+            filterCategory('전체');
+        }
+
+        // Modal Handlers
+        function openArticleModal(postId) {
+            const post = POSTS_DATA.find(p => p.id === postId);
+            if (!post) return;
+
+            document.getElementById('modalTitle').textContent = post.title;
+            document.getElementById('modalReadTime').textContent = post.readTime;
+            
+            const catBadge = document.getElementById('modalCategoryBadge');
+            catBadge.textContent = post.category;
+            catBadge.className = `px-2.5 py-1 rounded-full text-xs font-bold ${post.categoryColor}`;
+
+            document.getElementById('modalBrandBadge').textContent = post.brand;
+
+            const graphicBanner = document.getElementById('modalGraphicBanner');
+            graphicBanner.className = `p-6 rounded-2xl text-white flex flex-col justify-between shadow-inner bg-gradient-to-r ${post.gradient}`;
+            document.getElementById('modalGraphicIcon').textContent = post.icon;
+            document.getElementById('modalGraphicSubtitle').textContent = post.subtitle;
+
+            document.getElementById('modalBody').innerHTML = post.body;
+
+            const highlightsContainer = document.getElementById('modalHighlights');
+            highlightsContainer.innerHTML = post.highlights.map(h => `<li>${h}</li>`).join('');
+
+            const modal = document.getElementById('articleModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleModal() {
+            const modal = document.getElementById('articleModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function openInquiryModal() {
+            const modal = document.getElementById('inquiryModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+
+            // Reset form
+            document.getElementById('inquiryForm').classList.remove('hidden');
+            document.getElementById('inquirySuccess').classList.add('hidden');
+            document.getElementById('inquiryForm').reset();
+            handleCategoryChange();
+        }
+
+        function closeInquiryModal() {
+            const modal = document.getElementById('inquiryModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Cascading Dropdown Handler for Inquiry Form
+        function handleCategoryChange() {
+            const catSelect = document.getElementById('solutionCategory');
+            const prodSelect = document.getElementById('solutionProduct');
+            
+            if (!catSelect || !prodSelect) return;
+
+            const selectedCat = catSelect.value;
+            prodSelect.innerHTML = '';
+
+            if (!selectedCat || !PRODUCTS_BY_CATEGORY[selectedCat]) {
+                prodSelect.innerHTML = '<option value="">대분류를 먼저 선택해주세요</option>';
+                return;
+            }
+
+            const products = PRODUCTS_BY_CATEGORY[selectedCat];
+            prodSelect.innerHTML = '<option value="">세부 제품을 선택해주세요</option>' +
+                products.map(p => `<option value="${p}">${p}</option>`).join('');
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            document.getElementById('inquiryForm').classList.add('hidden');
+            document.getElementById('inquirySuccess').classList.remove('hidden');
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderPosts();
+        });
+    </script>
+</body>
+</html>
