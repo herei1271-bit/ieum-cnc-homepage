@@ -23,7 +23,9 @@ export default async function handler(req, res) {
 
     const items = await Promise.all(
       blobs.map(async (b) => {
-        const r = await fetch(b.url);
+        const r = await fetch(b.url, {
+          headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+        });
         const data = await r.json();
         return { ...data, uploadedAt: b.uploadedAt };
       })

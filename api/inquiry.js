@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const filename = `inquiries/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.json`;
 
     await put(filename, JSON.stringify(body), {
-      access: 'public',
+      access: 'private',
       contentType: 'application/json',
     });
 
