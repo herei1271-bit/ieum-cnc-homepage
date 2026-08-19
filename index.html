@@ -523,21 +523,21 @@
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">담당자명 *</label>
-                        <input type="text" required placeholder="홍길동" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        <input type="text" id="managerName" required placeholder="홍길동" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">연락처 *</label>
-                        <input type="tel" required placeholder="010-0000-0000" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        <input type="tel" id="phoneNumber" required placeholder="010-0000-0000" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">기관/학교/기업명 *</label>
-                        <input type="text" required placeholder="예: 서울OO초등학교, OO구청, OO도서관" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        <input type="text" id="orgName" required placeholder="예: 서울OO초등학교, OO구청, OO도서관" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">지역 *</label>
-                        <input type="text" required placeholder="예: 서울 강남구, 경기 성남시" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        <input type="text" id="region" required placeholder="예: 서울 강남구, 경기 성남시" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
                     </div>
                 </div>
 
@@ -565,7 +565,7 @@
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">문의 내용</label>
-                    <textarea rows="3" placeholder="필요 수량, 도입 예정 시기 등 문의 사항을 간단히 작성해주세요." class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+                    <textarea id="inquiryMessage" rows="3" placeholder="필요 수량, 도입 예정 시기 등 문의 사항을 간단히 작성해주세요." class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
                 </div>
 
                 <div class="pt-2">
@@ -1445,10 +1445,39 @@
                 products.map(p => `<option value="${p}">${p}</option>`).join('');
         }
 
-        function handleInquirySubmit(e) {
+        async function handleInquirySubmit(e) {
             e.preventDefault();
-            document.getElementById('inquiryForm').classList.add('hidden');
-            document.getElementById('inquirySuccess').classList.remove('hidden');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = '전송 중...';
+
+            const payload = {
+                managerName: document.getElementById('managerName').value,
+                phone: document.getElementById('phoneNumber').value,
+                orgName: document.getElementById('orgName').value,
+                region: document.getElementById('region').value,
+                category: document.getElementById('solutionCategory').value,
+                product: document.getElementById('solutionProduct').value,
+                message: document.getElementById('inquiryMessage').value,
+                submittedAt: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch('/api/inquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error('전송 실패');
+
+                document.getElementById('inquiryForm').classList.add('hidden');
+                document.getElementById('inquirySuccess').classList.remove('hidden');
+            } catch (err) {
+                alert('문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
         }
 
         // Initialize on load
