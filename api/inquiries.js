@@ -1,4 +1,4 @@
-import { list } from '@vercel/blob';
+import { list, get } from '@vercel/blob';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -23,10 +23,13 @@ export default async function handler(req, res) {
 
     const items = await Promise.all(
       blobs.map(async (b) => {
-        const r = await fetch(b.url, {
-          headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
-        });
-        const data = await r.json();
+        const result = await get(b.pathname, { access: 'private' });
+        const chunks = [];
+        for await (const chunk of result.stream) {
+          chunks.push(chunk);
+        }
+        const text = Buffer.concat(chunks).toString('utf-8');
+        const data = JSON.parse(text);
         return { ...data, uploadedAt: b.uploadedAt };
       })
     );
