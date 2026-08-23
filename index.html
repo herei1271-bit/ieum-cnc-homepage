@@ -72,9 +72,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" onclick="resetFilter(); return false;" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-900 to-brand-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-                    이음
-                </div>
+                <img src="images/logo.png" alt="이음 로고" class="w-11 h-11 object-contain group-hover:scale-105 transition-transform">
                 <div class="flex flex-col">
                     <span class="font-bold text-xl text-slate-900 tracking-tight leading-none">이음</span>
                     <span class="text-xs text-brand-600 font-semibold tracking-wider uppercase mt-1">IEUM</span>
@@ -102,7 +100,7 @@
     <!-- Hero Banner Section -->
     <section class="text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <img src="images/hero.jpg" alt="이음" class="absolute inset-0 w-full h-full object-cover" style="object-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-900 via-brand-900 to-slate-900" style="opacity: 0.4;"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-900 via-brand-900 to-slate-900" style="opacity: 0.5;"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
@@ -601,7 +599,7 @@
                 <!-- Brand Info -->
                 <div class="md:col-span-5 space-y-3">
                     <div class="flex items-center gap-2 text-white font-extrabold text-base">
-                        <span class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs">이음</span>
+                        <img src="images/logo.png" alt="이음 로고" class="w-7 h-7 object-contain">
                         주식회사 이음 (IEUM)
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
@@ -1188,6 +1186,7 @@
                 icon: '🧩',
                 image: 'images/smart-hama.jpg',
                 imagePosition: 'right',
+                modalImagePosition: 'right top',
                 categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
                 body: `
                     <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
@@ -1416,7 +1415,7 @@
             const graphicOverlay = document.getElementById('modalGraphicOverlay');
             if (post.image) {
                 graphicImage.src = post.image;
-                graphicImage.style.objectPosition = post.imagePosition || 'center';
+                graphicImage.style.objectPosition = post.modalImagePosition || post.imagePosition || 'center';
                 graphicImage.classList.remove('hidden');
                 // 사진이 너무 튀지 않도록 브랜드 그라데이션을 반투명 오버레이로 얹습니다.
                 graphicOverlay.className = `absolute inset-0 bg-gradient-to-r ${post.gradient}`;
