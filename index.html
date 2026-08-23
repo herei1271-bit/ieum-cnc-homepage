@@ -774,6 +774,8 @@
                 readTime: '4분 읽기',
                 gradient: 'from-indigo-600 via-purple-700 to-slate-900',
                 icon: '🎨',
+                image: 'images/k-aigrimm.jpg',
+                imagePosition: 'right',
                 categoryColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
                 body: `
                     <div class="space-y-6">
@@ -1175,6 +1177,8 @@
                 readTime: '4분 읽기',
                 gradient: 'from-amber-500 to-orange-700',
                 icon: '🧩',
+                image: 'images/smart-hama.jpg',
+                imagePosition: 'right',
                 categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
                 body: `
                     <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
@@ -1315,7 +1319,7 @@
                             </div>
 
                             <div class="rounded-xl text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform h-28">
-                                ${post.image ? `<img src="${post.image}" alt="${post.brand}" class="absolute inset-0 w-full h-full object-cover">` : ''}
+                                ${post.image ? `<img src="${post.image}" alt="${post.brand}" class="absolute inset-0 w-full h-full object-cover" style="object-position: ${post.imagePosition || 'center'};">` : ''}
                                 <div class="absolute inset-0 bg-gradient-to-r ${post.gradient} ${post.image ? 'opacity-70' : ''}"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
                                 <div class="relative h-full flex items-end p-5">
@@ -1398,6 +1402,7 @@
             const graphicOverlay = document.getElementById('modalGraphicOverlay');
             if (post.image) {
                 graphicImage.src = post.image;
+                graphicImage.style.objectPosition = post.imagePosition || 'center';
                 graphicImage.classList.remove('hidden');
                 // 사진이 너무 튀지 않도록 브랜드 그라데이션을 반투명 오버레이로 얹습니다.
                 graphicOverlay.className = `absolute inset-0 bg-gradient-to-r ${post.gradient} opacity-70`;
