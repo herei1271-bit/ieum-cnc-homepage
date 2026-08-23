@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>관리자 페이지 | 이음씨앤씨</title>
+    <title>관리자 페이지 | 이음</title>
     <meta name="robots" content="noindex, nofollow">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -110,7 +110,7 @@
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, '문의목록');
             const dateStr = new Date().toISOString().slice(0, 10);
-            XLSX.writeFile(wb, `이음씨앤씨_문의목록_${dateStr}.xlsx`);
+            XLSX.writeFile(wb, `이음_문의목록_${dateStr}.xlsx`);
         }
 
         function login() {
