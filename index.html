@@ -474,9 +474,9 @@
                 <div id="modalGraphicBanner" class="relative rounded-2xl text-white shadow-inner overflow-hidden min-h-[140px]">
                     <img id="modalGraphicImage" src="" alt="" class="hidden absolute inset-0 w-full h-full object-cover">
                     <div id="modalGraphicOverlay" class="absolute inset-0"></div>
-                    <div class="relative p-6 flex flex-col justify-between h-full">
-                        <span id="modalGraphicIcon" class="text-3xl mb-2"></span>
-                        <p id="modalGraphicSubtitle" class="text-sm font-medium opacity-90"></p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                    <div class="relative p-6 flex flex-col justify-end h-full">
+                        <p id="modalGraphicSubtitle" class="text-base font-bold text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.6)]"></p>
                     </div>
                 </div>
 
@@ -1314,9 +1314,13 @@
                                 </span>
                             </div>
 
-                            <div class="p-5 rounded-xl bg-gradient-to-r ${post.gradient} text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform">
-                                <span class="text-3xl mb-1 block">${post.icon}</span>
-                                <div class="font-bold text-sm tracking-wide opacity-95">${post.brand}</div>
+                            <div class="rounded-xl text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform h-28">
+                                ${post.image ? `<img src="${post.image}" alt="${post.brand}" class="absolute inset-0 w-full h-full object-cover">` : ''}
+                                <div class="absolute inset-0 bg-gradient-to-r ${post.gradient} ${post.image ? 'opacity-70' : ''}"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
+                                <div class="relative h-full flex items-end p-5">
+                                    <div class="font-bold text-sm tracking-wide text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.6)]">${post.brand}</div>
+                                </div>
                             </div>
 
                             <h3 class="text-base font-bold text-slate-900 group-hover:text-brand-600 transition-colors line-clamp-2 leading-snug">
@@ -1403,7 +1407,6 @@
                 graphicOverlay.className = `absolute inset-0 bg-gradient-to-r ${post.gradient}`;
             }
 
-            document.getElementById('modalGraphicIcon').textContent = post.icon;
             document.getElementById('modalGraphicSubtitle').textContent = post.subtitle;
 
             document.getElementById('modalBody').innerHTML = post.body;
