@@ -41,6 +41,16 @@
         html {
             font-size: 114%;
         }
+        @keyframes imgMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-img-marquee {
+            animation: imgMarquee 16s linear infinite;
+        }
+        .animate-img-marquee:hover {
+            animation-play-state: paused;
+        }
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -666,6 +676,11 @@
                 cardImagePosition: 'center',
                 modalImagePosition: 'bottom',
                 overlayOpacity: 20,
+                gallery: [
+                    { src: 'images/lockit-pouch1.jpg', alt: '락킷 사용 장면 - 학생 소지' },
+                    { src: 'images/lockit-pouch2.jpg', alt: '락킷 자석 잠금 클로즈업' },
+                    { src: 'images/lockit-pouch3.jpg', alt: '락킷 교사용 해제기 태그 장면' }
+                ],
                 categoryColor: 'bg-blue-100 text-blue-800 border-blue-200',
                 body: `
                     <div class="space-y-6">
@@ -688,11 +703,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-1 px-1 pb-1 sm:grid sm:grid-cols-3 sm:overflow-visible sm:mx-0 sm:px-0 sm:pb-0">
-                            <img src="images/lockit-pouch1.jpg" alt="락킷 사용 장면 - 학생 소지" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                            <img src="images/lockit-pouch2.jpg" alt="락킷 자석 잠금 클로즈업" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                            <img src="images/lockit-pouch3.jpg" alt="락킷 교사용 해제기 태그 장면" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                        </div>
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             교실 내 스마트폰 관리는 교사의 과도한 행정 부담과 학생 간 마찰, 분실·파손 시 책임 소재 문제로 오랜 시간 난제로 남아있었습니다. 이 솔루션은 스마트폰을 억지로 수거하여 보관함에 넣는 일방적 압수 방식에서 벗어나, 학생 스스로 기기를 안전하게 잠그고 자율적으로 소지하며 수업에 온전히 집중할 수 있도록 돕는 <em>혁신적인 공간 집중 에듀테크 솔루션</em>입니다.
@@ -798,6 +809,11 @@
                 gradient: 'from-red-600 via-rose-800 to-slate-900',
                 icon: '🚨',
                 image: 'images/s-solution.jpg',
+                gallery: [
+                    { src: 'images/ssolution-news.jpg', alt: '전기차 화재 관련 뉴스 보도' },
+                    { src: 'images/ssolution-fire.jpg', alt: '지하주차장 화재 현장' },
+                    { src: 'images/ssolution-control.jpg', alt: '에스솔루션 MMS 원격 관제 시스템' }
+                ],
                 categoryColor: 'bg-red-100 text-red-800 border-red-200',
                 body: `
                     <div class="space-y-6">
@@ -820,11 +836,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-1 px-1 pb-1 sm:grid sm:grid-cols-3 sm:overflow-visible sm:mx-0 sm:px-0 sm:pb-0">
-                            <img src="images/ssolution-news.jpg" alt="전기차 화재 관련 뉴스 보도" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                            <img src="images/ssolution-fire.jpg" alt="지하주차장 화재 현장" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                            <img src="images/ssolution-control.jpg" alt="에스솔루션 MMS 원격 관제 시스템" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                        </div>
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             학교, 관공서, 아파트, 공장 등 현대 시설물의 재난은 대형 참사로 이어질 수 있어 사전 예방과 초동 조치가 중요합니다. <strong>(주)에스솔루션(S-Solution)</strong>은 독자적인 AI 조기 감지 기술과 원격 소화, 스마트 통합 관제를 결합하여 재난 골든타임을 사수하는 <em>AI 재난 안전 솔루션 선도기업</em>입니다.
@@ -935,6 +947,8 @@
                             </div>
                         </div>
 
+                        <!--GALLERY-->
+
                         <p class="font-semibold text-slate-900 leading-relaxed">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다. 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단하고, 단순한 정답 맞추기가 아닌 <em>탐구력·문제해결력·융합적 사고</em>를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
 
                         <div class="space-y-4">
@@ -1017,6 +1031,11 @@
                 icon: '🐝',
                 image: 'images/honeybee.jpg',
                 imagePosition: 'top',
+                gallery: [
+                    { src: 'images/honeybee-floor.jpg', alt: '허니비 바닥 광택 장비 및 패드', position: 'top' },
+                    { src: 'images/honeybee-aircon.jpg', alt: '허니비 천장형 에어컨 분해 세척' },
+                    { src: 'images/honeybee-disinfect.jpg', alt: '허니비 출입구 방역·소독 작업' }
+                ],
                 categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
                 body: `
                     <div class="space-y-6">
@@ -1039,11 +1058,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-1 px-1 pb-1 sm:grid sm:grid-cols-3 sm:overflow-visible sm:mx-0 sm:px-0 sm:pb-0">
-                            <img src="images/honeybee-floor.jpg" alt="허니비 바닥 광택 장비 및 패드" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center" style="object-position: top;">
-                            <img src="images/honeybee-aircon.jpg" alt="허니비 천장형 에어컨 분해 세척" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                            <img src="images/honeybee-disinfect.jpg" alt="허니비 출입구 방역·소독 작업" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                        </div>
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             아이들과 시민들이 매일 숨 쉬고 머무르는 교육·공공 공간은 단순한 청소를 넘어 수준 높은 위생 관리가 필요합니다. <strong>허니비(HONEYBEE)</strong>는 10년 이상 경력의 전문가들과 첨단 기계 장비를 바탕으로 전국 관공서 및 학교에 안심 환경을 선도하는 종합 특수 청소 전문 기업입니다.
@@ -1153,6 +1168,8 @@
                             </div>
                         </div>
 
+                        <!--GALLERY-->
+
                         <p class="font-semibold text-slate-900 leading-relaxed">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다. 교육 현장의 생생한 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 폭넓게 다루는 <em>지역 밀착형 공익 교육 미디어</em>입니다.</p>
 
                         <div class="space-y-4">
@@ -1256,6 +1273,8 @@
                                 <div class="text-[11px] text-slate-400 mt-0.5">세종시립도서관 AI창작소</div>
                             </div>
                         </div>
+
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             디지털 미래 교육 현장과 공공도서관에서는 단순한 수동적 독서를 넘어, 아이들이 능동적으로 창작에 참여하는 창의적 융합 교육의 요구가 커지고 있습니다. ㈜채움씨앤아이의 <strong>케이닷 아이그림(K·AI Grimm)</strong>은 어린이와 이용자가 직접 작성한 키워드와 시나리오를 바탕으로 인공지능이 고품질 그림책을 자동 생성해주는 <em>특허 등록 생성형 AI 동화책 제작 솔루션</em>입니다.
@@ -1365,6 +1384,8 @@
                             </div>
                         </div>
 
+                        <!--GALLERY-->
+
                         <p class="font-semibold text-slate-900 leading-relaxed">단 한 사람도 사회적 소통에서 소외되지 않는 따뜻한 세상을 만듭니다. 보청기나 인공와우를 착용한 사용자가 주변 소음 없이 안내 방송이나 창구 담당자의 목소리를 자기 보청기로 직접 깨끗하게 들을 수 있도록 돕는 <em>무선 자기유도 음성 전송 시스템</em>입니다.</p>
 
                         <div class="space-y-4">
@@ -1468,6 +1489,8 @@
                                 <div class="text-[11px] text-slate-400 mt-0.5">공기압·수압 세척</div>
                             </div>
                         </div>
+
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             학교와 공공시설의 노후 수도관·난방관 내부에는 스케일, 녹, 이물질이 축적되어 수질 저하와 온수 효율 저하의 원인이 됩니다. <strong>한국배관세척관리협회</strong>가 개발한 <strong>파클로시스템</strong>은 화학약품을 전혀 사용하지 않고, 연속적으로 발사되는 공기압과 수압이 만들어내는 공기 방울의 충격파만으로 배관 내부를 세척하는 친환경 특허 공법입니다.
@@ -1577,6 +1600,8 @@
                             </div>
                         </div>
 
+                        <!--GALLERY-->
+
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             디지털 기기와 숏폼 영상에 익숙해진 미래 세대의 독해력 및 문해력 저하는 최근 교실 현장의 가장 심각한 교육 과제로 대두되고 있습니다. ㈜비주얼캠프의 <strong>리드포스쿨(READ for School)</strong>은 카메라만으로 학생의 눈동자 움직임을 추적하는 독보적 <em>모바일 시선 추적(Mobile Eye-Tracking) 기술</em>과 <em>AI 코스웨어</em>를 결합하여, 학생의 읽기 습관을 과학적으로 분석하고 개인별 맞춤 문해력 훈련을 제공하는 혁신 에듀테크 솔루션입니다.
                         </p>
@@ -1685,6 +1710,11 @@
                 image: 'images/kizling.jpg',
                 imagePosition: 'right',
                 modalOverlayOpacity: 45,
+                gallery: [
+                    { src: 'images/kizling-app1.png', alt: '키즐링 앱 챌린지 참여 화면', fit: 'contain' },
+                    { src: 'images/kizling-app2.png', alt: '키즐링 앱 이벤트 목록 화면', fit: 'contain' },
+                    { src: 'images/kizling-contest.jpg', alt: '키즐링 오프라인 경진대회 현장' }
+                ],
                 categoryColor: 'bg-violet-100 text-violet-800 border-violet-200',
                 body: `
                     <div class="space-y-6">
@@ -1707,11 +1737,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-1 px-1 pb-1 sm:grid sm:grid-cols-3 sm:overflow-visible sm:mx-0 sm:px-0 sm:pb-0">
-                            <img src="images/kizling-app1.png" alt="키즐링 앱 챌린지 참여 화면" class="w-56 sm:w-full h-36 object-contain bg-slate-50 rounded-xl shadow-sm p-1 flex-shrink-0 snap-center">
-                            <img src="images/kizling-app2.png" alt="키즐링 앱 이벤트 목록 화면" class="w-56 sm:w-full h-36 object-contain bg-slate-50 rounded-xl shadow-sm p-1 flex-shrink-0 snap-center">
-                            <img src="images/kizling-contest.jpg" alt="키즐링 오프라인 경진대회 현장" class="w-56 sm:w-full h-36 object-cover rounded-xl shadow-sm flex-shrink-0 snap-center">
-                        </div>
+                        <!--GALLERY-->
 
                         <p class="font-semibold text-slate-900 leading-relaxed">
                             프로그램 기획부터 참여 관리, 심사, 개별 피드백, 학부모 동의 관리까지 — 학교 대회·챌린지 운영은 선생님과 담당자에게 큰 행정 부담이었습니다. <strong>키즐링(Kizling)</strong>은 접수부터 결제, 심사, 결과 발표까지 대회 운영의 전 과정을 하나의 플랫폼에서 자동화하고, 학생들은 안전한 환경에서 짧은 영상으로 자신의 재능에 도전할 수 있는 <em>키즈 전용 숏폼 챌린지·대회 플랫폼</em>입니다.
@@ -1929,6 +1955,29 @@
         }
 
         // Modal Handlers
+        // 사진 배열(gallery)만 넣으면 모바일 자동 파노라마 + PC 3분할 그리드를 자동 생성합니다.
+        function buildGalleryHTML(images) {
+            if (!images || !images.length) return '';
+
+            const imgClass = (img) => img.fit === 'contain'
+                ? 'object-contain bg-slate-50 p-1'
+                : 'object-cover';
+            const posStyle = (img) => img.position ? ` style="object-position: ${img.position};"` : '';
+
+            const mobileTag = (img, hidden) => `<img src="${img.src}" alt="${hidden ? '' : (img.alt || '')}" class="w-56 h-36 ${imgClass(img)} rounded-xl shadow-sm flex-shrink-0"${posStyle(img)}${hidden ? ' aria-hidden="true"' : ''}>`;
+            const desktopTag = (img) => `<img src="${img.src}" alt="${img.alt || ''}" class="w-full h-36 ${imgClass(img)} rounded-xl shadow-sm"${posStyle(img)}>`;
+
+            const mobileImgs = images.map(img => mobileTag(img, false)).join('') + images.map(img => mobileTag(img, true)).join('');
+            const desktopImgs = images.map(desktopTag).join('');
+
+            return `
+                <div class="sm:hidden overflow-hidden">
+                    <div class="flex gap-3 w-max animate-img-marquee">${mobileImgs}</div>
+                </div>
+                <div class="hidden sm:grid sm:grid-cols-3 gap-3">${desktopImgs}</div>
+            `;
+        }
+
         function openArticleModal(postId) {
             const post = POSTS_DATA.find(p => p.id === postId);
             if (!post) return;
@@ -1963,7 +2012,7 @@
 
             document.getElementById('modalGraphicSubtitle').textContent = post.subtitle;
 
-            document.getElementById('modalBody').innerHTML = post.body;
+            document.getElementById('modalBody').innerHTML = post.body.replace('<!--GALLERY-->', buildGalleryHTML(post.gallery));
 
             const highlightsContainer = document.getElementById('modalHighlights');
             highlightsContainer.innerHTML = post.highlights.map(h => `<li>${h}</li>`).join('');
