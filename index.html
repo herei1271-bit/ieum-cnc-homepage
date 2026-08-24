@@ -664,8 +664,8 @@
                 imagePosition: 'right',
                 cardImage: 'images/lockit-pouch3.jpg',
                 cardImagePosition: 'center',
-                overlayOpacity: 10,
-                modalOverlayOpacity: 20,
+                modalImagePosition: 'bottom',
+                overlayOpacity: 20,
                 categoryColor: 'bg-blue-100 text-blue-800 border-blue-200',
                 body: `
                     <div class="space-y-6">
@@ -827,7 +827,7 @@
                         <div class="space-y-4">
                             <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
                                 <i class="fa-solid fa-shield-cat text-rose-600"></i>
-                                <span>에스솔루션 5대 AI 재난 안전 핵심 솔루션</span>
+                                <span>에스솔루션 4대 AI 재난 안전 핵심 솔루션</span>
                             </h3>
 
                             <div class="p-4 rounded-xl border border-rose-100 bg-rose-50/50 space-y-2">
@@ -909,14 +909,83 @@
                 modalImagePosition: 'right top',
                 categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
                 body: `
-                    <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
-                    <p class="text-sm text-slate-600 mt-2"><strong>아동역량검사 & 똑똑한 하마</strong>는 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단합니다. 단순한 정답 맞추기가 아닌, 탐구력·문제해결력·융합적 사고를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
-                    <h3 class="text-sm font-bold text-slate-900 mt-4 mb-2">주요 교육 가치</h3>
-                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
-                        <li><strong>정밀 데이터 리포트:</strong> 객관적 진단 데이터로 교사와 학부모에게 맞춤 가이드 제공.</li>
-                        <li><strong>교육 격차 해소:</strong> 기초 학력 미달 예방 및 학생별 흥미 기반 맞춤 배움 지원.</li>
-                        <li><strong>창의 융합 교구:</strong> 손으로 직접 만들고 체험하는 오감 만족 에듀테크 콘텐츠.</li>
-                    </ul>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-amber-400 font-black text-lg sm:text-xl">AI 정밀 진단</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">아동 역량 다각도 분석</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-amber-400 font-black text-lg sm:text-xl">저학년 특화</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">유치원·초등 저학년 대상</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-amber-400 font-black text-lg sm:text-xl">융합 교구재</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">오감 체험형 콘텐츠</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-amber-400 font-black text-lg sm:text-xl">데이터보드</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">교사·학부모 리포트 제공</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다. 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단하고, 단순한 정답 맞추기가 아닌 <em>탐구력·문제해결력·융합적 사고</em>를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-puzzle-piece text-amber-600"></i>
+                                <span>4대 핵심 교육 가치</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-amber-100 bg-amber-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-amber-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>AI 알고리즘 기반 아동 역량 정밀 진단</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    정답 여부만 보는 것이 아니라 사고 과정과 문제해결 방식을 다각도로 분석해, 교사와 학부모에게 객관적인 데이터 리포트를 제공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-orange-100 bg-orange-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-orange-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-orange-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>탐구력·문제해결력 키우는 창의 융합 교구재</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    손으로 직접 만들고 체험하는 오감 만족형 콘텐츠로, 정답을 외우기보다 스스로 탐구하고 해결하는 힘을 길러줍니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-yellow-100 bg-yellow-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-yellow-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-yellow-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>교육 격차 해소를 위한 맞춤 배움 설계</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    기초 학력 미달을 사전에 예방하고, 학생별 흥미와 수준에 맞춘 개인화 학습 경로를 제안합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>교사·학부모용 통합 데이터보드 제공</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    진단 결과를 한눈에 볼 수 있도록 시각화한 리포트를 제공하여, 교사와 학부모가 함께 맞춤 가이드를 확인할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                                <span>유치원·초등학교 저학년 대상 창의 융합 교육 프로그램으로 활용 가능</span>
+                            </span>
+                            <span class="text-amber-400 font-bold">문의 필요</span>
+                        </div>
+                    </div>
                 `,
                 highlights: [
                     '초등 저학년 맞춤형 역량 진단 알고리즘 적용',
@@ -971,7 +1040,7 @@
                         <div class="space-y-4">
                             <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
                                 <i class="fa-solid fa-list-check text-emerald-600"></i>
-                                <span>허니비 5대 핵심 사업부 및 전문 서비스</span>
+                                <span>허니비 4대 핵심 사업부 및 전문 서비스</span>
                             </h3>
 
                             <div class="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-2">
@@ -1052,8 +1121,83 @@
                 imagePosition: 'right',
                 categoryColor: 'bg-cyan-100 text-cyan-800 border-cyan-200',
                 body: `
-                    <p class="font-semibold text-slate-900">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다.</p>
-                    <p class="text-sm text-slate-600 mt-2"><strong>교육미래위원회([지역]교육미래뉴스)</strong>는 교육 현장의 생생한 현장 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 생생하게 다루는 공익 미디어입니다.</p>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-cyan-400 font-black text-lg sm:text-xl">지역 특화</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">시·도 단위 교육 전문 매체</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-cyan-400 font-black text-lg sm:text-xl">실시간 발행</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">온라인 신문 형태</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-cyan-400 font-black text-lg sm:text-xl">현장 기자단</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">교육 전문 취재 네트워크</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-cyan-400 font-black text-lg sm:text-xl">심층 기획</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">교육 이슈 집중 보도</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다. 교육 현장의 생생한 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 폭넓게 다루는 <em>지역 밀착형 공익 교육 미디어</em>입니다.</p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-newspaper text-cyan-600"></i>
+                                <span>4대 핵심 운영 방식</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-cyan-100 bg-cyan-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-cyan-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-cyan-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>지역 밀착형 교육 전문 보도</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    시·도 단위로 특화된 지역판을 발행하여, 관할 교육청·학교의 소식과 정책 변화를 가장 먼저 전달합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-sky-100 bg-sky-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-sky-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>온라인 신문 형태의 실시간 발행 시스템</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    학교 행사, 정책 발표, 긴급 공지 등을 실시간으로 게재해 학부모와 지역 사회의 정보 공백을 최소화합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-blue-100 bg-blue-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-blue-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-blue-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>교육청·지자체 보도자료 신속 연계 게시</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    공식 보도자료와 정책 발표 내용을 신속하게 게재하여 학부모·주민에게 정확하고 투명한 정보를 전달합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>교권 보호·학생 복지 등 심층 기획 보도</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    단순 소식 전달을 넘어, 교육 현장의 목소리를 대변하는 기획·심층 취재 콘텐츠로 교육 공동체의 신뢰를 쌓습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-signal text-cyan-400"></i>
+                                <span>지역 교육청·학교와의 협력을 통한 현장 밀착형 보도 체계 운영</span>
+                            </span>
+                            <span class="text-cyan-400 font-bold">운영 중</span>
+                        </div>
+                    </div>
                 `,
                 highlights: [
                     '지역 맞춤형 교육 뉴스 특화 보도',
@@ -1187,11 +1331,85 @@
                 icon: '👂',
                 image: 'images/telecoilzone.jpg',
                 imagePosition: 'right',
-                overlayOpacity: 30,
                 categoryColor: 'bg-purple-100 text-purple-800 border-purple-200',
                 body: `
-                    <p class="font-semibold text-slate-900">단 한 사람도 사회적 소통에서 소외되지 않는 따뜻한 세상을 만듭니다.</p>
-                    <p class="text-sm text-slate-600 mt-2"><strong>텔레코일존</strong>은 보청기나 인공와우를 착용한 사용자가 주변 소음 없이 안내 방송이나 선생님·창구 담당자의 목소리를 자기 보청기로 직접 깨끗하게 들을 수 있도록 돕는 무선 음성 전송 시스템입니다.</p>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-400 font-black text-lg sm:text-xl">유도 루프</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">별도 리시버 없이 보청기 수신</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-purple-400 font-black text-lg sm:text-xl">유도 루프 방식</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">폭넓은 보청기 호환성</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-400 font-black text-lg sm:text-xl">소음 차단</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">웅성임·잔향 제거</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-purple-400 font-black text-lg sm:text-xl">설치 간편</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">창구·강의실 어디든 구축</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">단 한 사람도 사회적 소통에서 소외되지 않는 따뜻한 세상을 만듭니다. 보청기나 인공와우를 착용한 사용자가 주변 소음 없이 안내 방송이나 창구 담당자의 목소리를 자기 보청기로 직접 깨끗하게 들을 수 있도록 돕는 <em>무선 자기유도 음성 전송 시스템</em>입니다.</p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-ear-listen text-purple-600"></i>
+                                <span>4대 핵심 기술 및 특징</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-purple-100 bg-purple-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>텔레코일 유도 루프 방식, 별도 기기 없이 바로 수신</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    보청기·인공와우의 T-모드(텔레코일 모드)만 켜면, 창구나 강의실에 설치된 유도 루프에서 나오는 음성 신호를 별도 리시버 없이 그대로 수신할 수 있습니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-indigo-100 bg-indigo-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-indigo-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>주변 소음·잔향 없는 순수 음성 전달</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    마이크로 입력된 음성만 자기장 신호로 변환해 전달하는 방식이라, 소음이 많은 공공장소에서도 왜곡이나 울림 없이 또렷하게 청취할 수 있습니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-fuchsia-100 bg-fuchsia-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-fuchsia-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-fuchsia-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>국제 표준 규격의 유도 루프 기술</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    보청기·인공와우 업계에서 통용되는 유도 루프(Induction Loop) 방식을 기반으로 하여, 제조사에 관계없이 폭넓은 호환성을 갖추고 있습니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>공간별 맞춤 설치 & 배리어프리 의무 대응</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    민원 창구형, 상담실형, 강의실 전체형 등 공간 특성에 맞는 설치 방식을 지원하며, 장애인차별금지법 등 공공기관 배리어프리 의무 기준에 맞춰 구축할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-building-columns text-purple-400"></i>
+                                <span>관공서 민원실, 학교, 공공기관 등 배리어프리 인프라가 필요한 공간에 맞춤 설치 가능</span>
+                            </span>
+                            <span class="text-purple-400 font-bold">문의 필요</span>
+                        </div>
+                    </div>
                 `,
                 highlights: [
                     '공공기관 및 학교 민원실 배리어 프리 의무화 지원',
@@ -1628,7 +1846,7 @@
 
                             <div class="rounded-xl text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform h-28">
                                 ${(post.cardImage || post.image) ? `<img src="${post.cardImage || post.image}" alt="${post.brand}" class="absolute inset-0 w-full h-full object-cover" style="object-position: ${post.cardImagePosition || post.imagePosition || 'center'};">` : ''}
-                                <div class="absolute inset-0 bg-gradient-to-r ${post.gradient}" style="${(post.cardImage || post.image) ? `opacity:${(post.overlayOpacity ?? 60) / 100}` : ''}"></div>
+                                <div class="absolute inset-0 bg-gradient-to-r ${post.gradient}" style="${(post.cardImage || post.image) ? `opacity:${(post.overlayOpacity ?? 35) / 100}` : ''}"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
                                 <div class="relative h-full flex items-end p-5">
                                     <div class="font-bold text-sm tracking-wide text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.6)] line-clamp-2">${post.pointText || post.brand}</div>
@@ -1716,7 +1934,7 @@
                 graphicImage.classList.remove('hidden');
                 // 사진이 너무 튀지 않도록 브랜드 그라데이션을 반투명 오버레이로 얹습니다.
                 graphicOverlay.className = `absolute inset-0 bg-gradient-to-r ${post.gradient}`;
-                graphicOverlay.style.opacity = (post.modalOverlayOpacity ?? post.overlayOpacity ?? 60) / 100;
+                graphicOverlay.style.opacity = (post.modalOverlayOpacity ?? post.overlayOpacity ?? 35) / 100;
             } else {
                 graphicImage.src = '';
                 graphicImage.classList.add('hidden');
