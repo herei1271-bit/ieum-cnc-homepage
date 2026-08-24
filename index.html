@@ -778,7 +778,7 @@
                 id: 'k-aigrimm',
                 category: '스마트 교육 & AI',
                 brand: '케이닷 아이그림 (K·AI Grimm)',
-                pointText: '상상을 현실로 만드는 생성형 AI 동화책 제작 솔루션',
+                pointText: '상상을 현실로 만드는 생성형 AI<br>동화책 제작 솔루션',
                 title: '상상을 현실로 만드는 생성형 AI 동화책 제작 솔루션, 케이닷 아이그림',
                 subtitle: '키워드와 시나리오 입력으로 완성하는 나만의 AI 그림책 창작 플랫폼 (특허 보유)',
                 excerpt: '어린이의 상상력과 표현력을 극대화하는 생성형 AI 동화책 제작 솔루션! 키워드 및 이야기 시나리오 입력만으로 다채로운 분위기와 시점의 그림을 자동 생성하고, 편집 및 스마트 출판까지 지원합니다.',
@@ -1229,7 +1229,7 @@
                 id: 'smart-hama',
                 category: '스마트 교육 & AI',
                 brand: '똑똑한 하마 / 아동역량검사',
-                pointText: 'AI 기반 데이터 진단과 맞춤형 창의 융합 에듀테크',
+                pointText: 'AI 기반 데이터 진단과<br>맞춤형 창의 융합 에듀테크',
                 title: 'AI 기반 데이터 진단과 맞춤형 창의 융합 에듀테크',
                 subtitle: '아이들의 숨겨진 잠재력을 발견하는 지능형 교육 솔루션',
                 excerpt: '저학년 대상 창의 융합 교구재와 AI 데이터 기반 역량 진단 도구를 통해 교육 격차를 해소하고 미래 인재를 양성하는 스마트 교육 파트너입니다.',
@@ -1265,7 +1265,7 @@
                 id: 'telecall',
                 category: '포용 & 복지',
                 brand: '텔레코일존',
-                pointText: '청각 약자를 위한 배리어 프리(Barrier-Free) 보청 보조기기',
+                pointText: '청각 약자를 위한 배리어 프리(Barrier-Free)<br>보청 보조기기',
                 title: '청각 약자를 위한 배리어 프리(Barrier-Free) 보청 보조기기',
                 subtitle: '소음 속에서도 명확한 소리를 전달하는 무장애 소통 인프라',
                 excerpt: '청각 장애인 및 고령자가 관공서, 민원실, 교육장에서 명확하게 음성을 청취할 수 있도록 지원하는 텔레코일 존 인프라 솔루션입니다.',
@@ -1295,7 +1295,7 @@
                 id: 'newsne',
                 category: '미디어 & 소통',
                 brand: '뉴스네 (교육미래뉴스)',
-                pointText: '지역 교육 현안을 투명하게 연결하는 공익 미디어 플랫폼',
+                pointText: '지역 교육 현안을 투명하게 연결하는<br>공익 미디어 플랫폼',
                 title: '지역 교육 현안을 투명하게 연결하는 공익 미디어 플랫폼',
                 subtitle: '올바른 여론 형성과 교육 현장의 목소리를 대변하는 가교',
                 excerpt: '지역별 맞춤형 교육 이슈, 정책 제안, 학교 소식을 신속하고 공정하게 전달하는 인터넷 언론·신문 미디어 플랫폼입니다.',
@@ -1432,7 +1432,7 @@
                 id: 'kizling',
                 category: '스마트 교육 & AI',
                 brand: '키즐링 (Kizling)',
-                pointText: '학교 대회·챌린지 운영을 하나로 잇는 안전한 키즈 숏폼 플랫폼',
+                pointText: '학교 대회·챌린지 운영을 하나로 잇는<br>안전한 키즈 숏폼 플랫폼',
                 title: '학교 대회·챌린지 운영을 하나로 잇는 안전한 키즈 숏폼 플랫폼, 키즐링',
                 subtitle: '기획부터 참여 관리, 심사, 결과 발표까지 — 교사 업무 부담을 최대 80% 줄이는 대회 운영 솔루션',
                 excerpt: '학생들이 짧은 영상으로 도전하는 챌린지·경진대회를 기획부터 접수, 심사, 결과 발표까지 한 번에 관리하는 키즈 전용 숏폼 플랫폼입니다. 영상은 비공개로 안전하게 제출되어 초상권 걱정 없이 학교·교육청 단위로 도입할 수 있습니다.',
@@ -1688,7 +1688,7 @@
             const post = POSTS_DATA.find(p => p.id === postId);
             if (!post) return;
 
-            document.getElementById('modalTitle').textContent = post.pointText || post.title;
+            document.getElementById('modalTitle').textContent = (post.pointText || post.title).replace(/<br\s*\/?>/gi, ' ');
             document.getElementById('modalReadTime').textContent = post.readTime;
             
             const catBadge = document.getElementById('modalCategoryBadge');
