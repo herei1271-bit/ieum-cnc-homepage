@@ -38,6 +38,9 @@
         }
     </script>
     <style>
+        html {
+            font-size: 108%;
+        }
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -660,7 +663,6 @@
                 icon: '👁️',
                 image: 'images/read-for-school.jpg',
                 imagePosition: 'center',
-                overlayOpacity: 70,
                 categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
                 body: `
                     <div class="space-y-6">
@@ -1618,7 +1620,7 @@
 
                             <div class="rounded-xl text-white mb-4 relative overflow-hidden shadow-sm group-hover:scale-[1.01] transition-transform h-28">
                                 ${post.image ? `<img src="${post.image}" alt="${post.brand}" class="absolute inset-0 w-full h-full object-cover" style="object-position: ${post.imagePosition || 'center'};">` : ''}
-                                <div class="absolute inset-0 bg-gradient-to-r ${post.gradient}" style="${post.image ? `opacity:${(post.overlayOpacity ?? 70) / 100}` : ''}"></div>
+                                <div class="absolute inset-0 bg-gradient-to-r ${post.gradient}" style="${post.image ? `opacity:${(post.overlayOpacity ?? 60) / 100}` : ''}"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
                                 <div class="relative h-full flex items-end p-5">
                                     <div class="font-bold text-sm tracking-wide text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.6)] line-clamp-2">${post.pointText || post.brand}</div>
@@ -1706,7 +1708,7 @@
                 graphicImage.classList.remove('hidden');
                 // 사진이 너무 튀지 않도록 브랜드 그라데이션을 반투명 오버레이로 얹습니다.
                 graphicOverlay.className = `absolute inset-0 bg-gradient-to-r ${post.gradient}`;
-                graphicOverlay.style.opacity = (post.overlayOpacity ?? 70) / 100;
+                graphicOverlay.style.opacity = (post.overlayOpacity ?? 60) / 100;
             } else {
                 graphicImage.src = '';
                 graphicImage.classList.add('hidden');
