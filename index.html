@@ -645,243 +645,7 @@
     <script>
         // Complete, verified posts data structure
         const POSTS_DATA = [
-            {
-                id: 'read-for-school',
-                category: '스마트 교육 & AI',
-                brand: '리드포스쿨 (READ for School)',
-                pointText: '시선 추적 AI 기반 문해력 진단·증진 코스웨어',
-                title: '시선 추적 AI 기반 문해력 진단·증진 코스웨어, 리드포스쿨',
-                subtitle: '별도 장비 없이 스마트기기 카메라로 시선을 분석하여 개인별 맞춤 독해 훈련을 제공하는 혁신 에듀테크',
-                excerpt: '전국 300여 개 학교 도입! 온디바이스 시선추적(Eye-Tracking) 기술로 학생의 읽기 습관과 독해 패턴을 정밀 진단하고, 4단계 AI 맞춤형 훈련 코스와 교사용 LMS를 통해 문해력을 획기적으로 향상시킵니다.',
-                summaryPoints: [
-                    '전국 300여 개 학교 도입',
-                    '카메라만으로 시선추적, 별도 장비 불필요',
-                    '4단계 맞춤 훈련 + 교사용 LMS 제공'
-                ],
-                readTime: '4분 읽기',
-                gradient: 'from-emerald-600 via-teal-700 to-slate-900',
-                icon: '👁️',
-                image: 'images/read-for-school.jpg',
-                imagePosition: 'center',
-                categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-                body: `
-                    <div class="space-y-6">
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
-                            <div class="p-2 border-r border-slate-800">
-                                <div class="text-emerald-400 font-black text-lg sm:text-xl">대통령 표창</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">2024 정보문화의 달</div>
-                            </div>
-                            <div class="p-2 sm:border-r border-slate-800">
-                                <div class="text-emerald-400 font-black text-lg sm:text-xl">CES 혁신상</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">2022·2023 2년 연속</div>
-                            </div>
-                            <div class="p-2 border-r border-slate-800">
-                                <div class="text-emerald-400 font-black text-lg sm:text-xl">300+ 학교</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">전국 초·중·고 구축</div>
-                            </div>
-                            <div class="p-2">
-                                <div class="text-emerald-400 font-black text-lg sm:text-xl">시선 추적 AI</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">별도 장비 0개 (HW 불필요)</div>
-                            </div>
-                        </div>
 
-                        <p class="font-semibold text-slate-900 leading-relaxed">
-                            디지털 기기와 숏폼 영상에 익숙해진 미래 세대의 독해력 및 문해력 저하는 최근 교실 현장의 가장 심각한 교육 과제로 대두되고 있습니다. ㈜비주얼캠프의 <strong>리드포스쿨(READ for School)</strong>은 카메라만으로 학생의 눈동자 움직임을 추적하는 독보적 <em>모바일 시선 추적(Mobile Eye-Tracking) 기술</em>과 <em>AI 코스웨어</em>를 결합하여, 학생의 읽기 습관을 과학적으로 분석하고 개인별 맞춤 문해력 훈련을 제공하는 혁신 에듀테크 솔루션입니다.
-                        </p>
-
-                        <div class="space-y-4">
-                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
-                                <i class="fa-solid fa-eye text-emerald-600"></i>
-                                <span>리드포스쿨(READ for School)의 4대 핵심 기술 및 특징</span>
-                            </h3>
-
-                            <div class="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-emerald-600 text-white flex items-center justify-center text-xs">1</span>
-                                    <span>하드웨어 필요 없는 온디바이스 모바일 시선 추적</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    적외선 카메라나 별도 센서 장비 없이, 학교에 보유된 태블릿PC, 스마트폰, 노트북, 크롬북의 기본 웹캠만으로 정밀하게 시선을 분석합니다 (1.55° 오차 이내). 모든 OS 및 웹 브라우저를 완벽하게 지원합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-teal-100 bg-teal-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-teal-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-teal-600 text-white flex items-center justify-center text-xs">2</span>
-                                    <span>4대 시선 데이터 기반 과학적 문해력 정밀 진단 (RoCAT & ACLA)</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    역행 비율(되돌아 읽는 습관), 시선 고정 시간, 독해 속도, 시폭(한번에 보는 글자수) 등 4대 핵심 지표를 정밀 측정합니다. EBS 계약 지문과 컴퓨터 적응형 테스트(CAT) 기법을 활용합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-cyan-100 bg-cyan-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-cyan-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-cyan-600 text-white flex items-center justify-center text-xs">3</span>
-                                    <span>체계적인 4단계 맞춤 훈련 모듈 & AI 튜터 피드백</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    [지문 읽기 ➔ 어휘 학습 ➔ 객관식/추론 문제 풀이 ➔ AI 튜터 피드백]으로 이어지는 선순환 구조를 제공하며, AI 튜터가 요약문 및 서술형 답변을 실시간 교정합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
-                                    <span>교사용 LMS & 지문 업로드 시 AI 문제 자동 생성</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    LMS 대시보드로 학생별 시선 패턴(Gaze Pattern)과 학습 성과를 시각적으로 확인하며, 교사가 단원 지문 입력 시 AI가 맞춤형 문제를 자동 생성합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="pt-2">
-                            <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">국내 최고 대학 교수진 공동 연구 및 교육 효과 실증</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
-                                    <div class="font-bold text-emerald-700">서울대학교 교육심리학과</div>
-                                    <div class="font-bold text-slate-800">신종호 교수 연구진</div>
-                                    <p class="text-[11px] text-slate-500">학습자의 읽기 습관, 시선패턴, 이해도 분석 및 피드백 체계 구축</p>
-                                </div>
-                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
-                                    <div class="font-bold text-emerald-700">한양대학교 국어교육과</div>
-                                    <div class="font-bold text-slate-800">조병영 교수 연구진</div>
-                                    <p class="text-[11px] text-slate-500">시선데이터 및 독해검사 데이터 기반 맞춤형 학습 시스템 구현</p>
-                                </div>
-                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
-                                    <div class="font-bold text-emerald-700">이화여자대학교 국어교육과</div>
-                                    <div class="font-bold text-slate-800">서혁 교수 연구진</div>
-                                    <p class="text-[11px] text-slate-500">콘텐츠 검수, 학년별/난이도별 지문 및 문제 세트 훈련 배치</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
-                            <span class="flex items-center gap-2">
-                                <i class="fa-solid fa-chart-line text-emerald-400"></i>
-                                <span>경남 지역 중학교 3개월 실증 결과 정답률 평균 15% 증가 입증 & 전국 300여 개 학교 구축</span>
-                            </span>
-                            <span class="text-emerald-400 font-bold">검증 완료</span>
-                        </div>
-                    </div>
-                `,
-                highlights: [
-                    '별도 하드웨어 없이 모바일/태블릿/PC 카메라만으로 온디바이스 시선추적(Eye-Tracking) 구현',
-                    '2024 정보문화의 달 대통령 표창 & CES 혁신상 2년 연속 수상으로 검증된 독보적 기술력',
-                    '시선 데이터(역행 비율, 고정 시간, 독해 속도, 시폭) 기반 4단계 AI 문해력 진단 및 맞춤 훈련',
-                    'EBS 계약 지문 기반 RoCAT 진단 및 교사 직접 지문 업로드 시 AI 문제 자동 생성 커리큘럼',
-                    '서울대·한양대·이화여대 교수진 공동 연구 및 전국 300여 개 학교 실증 완료 (정답률 15% 상승)'
-                ]
-            },
-            {
-                id: 'k-aigrimm',
-                category: '스마트 교육 & AI',
-                brand: '케이닷 아이그림 (K·AI Grimm)',
-                pointText: '상상을 현실로 만드는 생성형 AI<br>동화책 제작 솔루션',
-                title: '상상을 현실로 만드는 생성형 AI 동화책 제작 솔루션, 케이닷 아이그림',
-                subtitle: '키워드와 시나리오 입력으로 완성하는 나만의 AI 그림책 창작 플랫폼 (특허 보유)',
-                excerpt: '어린이의 상상력과 표현력을 극대화하는 생성형 AI 동화책 제작 솔루션! 키워드 및 이야기 시나리오 입력만으로 다채로운 분위기와 시점의 그림을 자동 생성하고, 편집 및 스마트 출판까지 지원합니다.',
-                summaryPoints: [
-                    '키워드 입력만으로 AI 동화책 자동 생성',
-                    '특허 등록 생성형 AI 기술',
-                    'PC·스마트폰·태블릿 어디서나 이용 가능'
-                ],
-                readTime: '4분 읽기',
-                gradient: 'from-indigo-600 via-purple-700 to-slate-900',
-                icon: '🎨',
-                image: 'images/k-aigrimm.jpg',
-                imagePosition: 'right',
-                categoryColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-                body: `
-                    <div class="space-y-6">
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
-                            <div class="p-2 border-r border-slate-800">
-                                <div class="text-purple-300 font-black text-lg sm:text-xl">특허 보유</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">제 10-2611923 호</div>
-                            </div>
-                            <div class="p-2 sm:border-r border-slate-800">
-                                <div class="text-purple-300 font-black text-lg sm:text-xl">생성형 AI</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">딥러닝 기반 이미지 연동</div>
-                            </div>
-                            <div class="p-2 border-r border-slate-800">
-                                <div class="text-purple-300 font-black text-lg sm:text-xl">Cross-Dev</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">PC·스마트폰·태블릿</div>
-                            </div>
-                            <div class="p-2">
-                                <div class="text-purple-300 font-black text-lg sm:text-xl">국내 최초</div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">세종시립도서관 AI창작소</div>
-                            </div>
-                        </div>
-
-                        <p class="font-semibold text-slate-900 leading-relaxed">
-                            디지털 미래 교육 현장과 공공도서관에서는 단순한 수동적 독서를 넘어, 아이들이 능동적으로 창작에 참여하는 창의적 융합 교육의 요구가 커지고 있습니다. ㈜채움씨앤아이의 <strong>케이닷 아이그림(K·AI Grimm)</strong>은 어린이와 이용자가 직접 작성한 키워드와 시나리오를 바탕으로 인공지능이 고품질 그림책을 자동 생성해주는 <em>특허 등록 생성형 AI 동화책 제작 솔루션</em>입니다.
-                        </p>
-
-                        <div class="space-y-4">
-                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
-                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-600"></i>
-                                <span>케이닷 아이그림(K·AI Grimm)의 4대 혁신 기능 및 경쟁력</span>
-                            </h3>
-
-                            <div class="p-4 rounded-xl border border-indigo-100 bg-indigo-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-indigo-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs">1</span>
-                                    <span>키워드 & 시나리오 기반 맞춤 AI 그림 생성</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    어린이가 입력한 짧은 키워드나 시나리오 문맥을 AI가 정확하게 해석하여 원하는 예술 화풍, 분위기, 캐릭터의 다양한 시점을 반영한 완벽한 컷 이미지를 구현합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-purple-100 bg-purple-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-xs">2</span>
-                                    <span>자유로운 내용 편집 및 스마트 레이아웃 구성</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    AI가 그린 이미지와 텍스트 배치를 자유롭게 수정하고 폰트 크기, 문단 구성, 페이지 레이아웃을 몇 번의 클릭으로 조율하여 세공합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-sky-100 bg-sky-50/50 space-y-2">
-                                <div class="flex items-center gap-2 text-sky-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-sky-600 text-white flex items-center justify-center text-xs">3</span>
-                                    <span>스마트 기기 멀티 플랫폼(Cross-Platform) 지원</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    무거운 프로그램 설치 없이 Web 기반으로 작동하며 태블릿, PC, 스마트폰 등 다양한 디바이스 환경에서 최적화된 화면을 제공합니다.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
-                                    <span>갤러리 형태의 완성작 관리 & 디지털 라이브러리</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
-                                    완성된 동화책은 갤러리 형태로 조회할 수 있으며 PDF 저장, E-Book 공유, 실물 책자 제본 연계 활동을 지원합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
-                            <span class="flex items-center gap-2">
-                                <i class="fa-solid fa-award text-purple-400"></i>
-                                <span>국내 공공도서관 최초 세종시립도서관 '아이(AI) 창작소' 적용 및 독서 창작 실증 완료</span>
-                            </span>
-                            <span class="text-purple-300 font-bold">검증 완료</span>
-                        </div>
-                    </div>
-                `,
-                highlights: [
-                    '생성형 AI 기반 그림책 자동 제작 특허 보유 (특허 제 10-2611923 호)',
-                    '어린이의 시나리오/키워드로 다양한 화풍과 시점의 고품질 그림 연출',
-                    'PC, 스마트폰, 태블릿 등 멀티 디바이스 반응형 웹 서비스 지원',
-                    '세종시립도서관 "아이(AI) 창작소" 등 전국 공공도서관 및 스마트 학교 공식 도입',
-                    '갤러리 방식의 편리한 앨범 관리, 문서 PDF 및 실물 책자 제본 확장 지원'
-                ]
-            },
             {
                 id: 'lockit',
                 category: '디지털 청소년 보호',
@@ -1118,6 +882,42 @@
                 ]
             },
             {
+                id: 'smart-hama',
+                category: '스마트 교육 & AI',
+                brand: '똑똑한 하마 / 아동역량검사',
+                pointText: 'AI 기반 데이터 진단과<br>맞춤형 창의 융합 에듀테크',
+                title: 'AI 기반 데이터 진단과 맞춤형 창의 융합 에듀테크',
+                subtitle: '아이들의 숨겨진 잠재력을 발견하는 지능형 교육 솔루션',
+                excerpt: '저학년 대상 창의 융합 교구재와 AI 데이터 기반 역량 진단 도구를 통해 교육 격차를 해소하고 미래 인재를 양성하는 스마트 교육 파트너입니다.',
+                summaryPoints: [
+                    'AI 기반 아동 역량 정밀 진단',
+                    '탐구력·문제해결력 키우는 융합 교구재',
+                    '교사용 학생 관리 데이터보드 제공'
+                ],
+                readTime: '4분 읽기',
+                gradient: 'from-amber-500 to-orange-700',
+                icon: '🧩',
+                image: 'images/smart-hama.jpg',
+                imagePosition: 'right',
+                modalImagePosition: 'right top',
+                categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
+                body: `
+                    <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
+                    <p class="text-sm text-slate-600 mt-2"><strong>아동역량검사 & 똑똑한 하마</strong>는 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단합니다. 단순한 정답 맞추기가 아닌, 탐구력·문제해결력·융합적 사고를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
+                    <h3 class="text-sm font-bold text-slate-900 mt-4 mb-2">주요 교육 가치</h3>
+                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
+                        <li><strong>정밀 데이터 리포트:</strong> 객관적 진단 데이터로 교사와 학부모에게 맞춤 가이드 제공.</li>
+                        <li><strong>교육 격차 해소:</strong> 기초 학력 미달 예방 및 학생별 흥미 기반 맞춤 배움 지원.</li>
+                        <li><strong>창의 융합 교구:</strong> 손으로 직접 만들고 체험하는 오감 만족 에듀테크 콘텐츠.</li>
+                    </ul>
+                `,
+                highlights: [
+                    '초등 저학년 맞춤형 역량 진단 알고리즘 적용',
+                    '교육청 및 유치원·초등학교 활용성 우수',
+                    '교사용 학생 관리 통합 데이터보드 제공'
+                ]
+            },
+            {
                 id: 'honeybee',
                 category: '안전 & 환경',
                 brand: '허니비 (Honeybee)',
@@ -1226,39 +1026,140 @@
                 ]
             },
             {
-                id: 'smart-hama',
-                category: '스마트 교육 & AI',
-                brand: '똑똑한 하마 / 아동역량검사',
-                pointText: 'AI 기반 데이터 진단과<br>맞춤형 창의 융합 에듀테크',
-                title: 'AI 기반 데이터 진단과 맞춤형 창의 융합 에듀테크',
-                subtitle: '아이들의 숨겨진 잠재력을 발견하는 지능형 교육 솔루션',
-                excerpt: '저학년 대상 창의 융합 교구재와 AI 데이터 기반 역량 진단 도구를 통해 교육 격차를 해소하고 미래 인재를 양성하는 스마트 교육 파트너입니다.',
+                id: 'newsne',
+                category: '미디어 & 소통',
+                brand: '교육미래위원회(교육미래뉴스)',
+                pointText: '지역 교육 현안을 투명하게 연결하는<br>공익 미디어 플랫폼',
+                title: '지역 교육 현안을 투명하게 연결하는 공익 미디어 플랫폼',
+                subtitle: '올바른 여론 형성과 교육 현장의 목소리를 대변하는 가교',
+                excerpt: '지역별 맞춤형 교육 이슈, 정책 제안, 학교 소식을 신속하고 공정하게 전달하는 인터넷 언론·신문 미디어 플랫폼입니다.',
                 summaryPoints: [
-                    'AI 기반 아동 역량 정밀 진단',
-                    '탐구력·문제해결력 키우는 융합 교구재',
-                    '교사용 학생 관리 데이터보드 제공'
+                    '지역 교육 현안 신속·공정 보도',
+                    '교육청·지자체 소식 실시간 연계',
+                    '투명한 정보 공유로 교육 공동체 신뢰 구축'
                 ],
-                readTime: '4분 읽기',
-                gradient: 'from-amber-500 to-orange-700',
-                icon: '🧩',
-                image: 'images/smart-hama.jpg',
+                readTime: '3분 읽기',
+                gradient: 'from-cyan-600 to-slate-800',
+                icon: '📰',
+                image: 'images/newsne.jpg',
                 imagePosition: 'right',
-                modalImagePosition: 'right top',
-                categoryColor: 'bg-amber-100 text-amber-800 border-amber-200',
+                categoryColor: 'bg-cyan-100 text-cyan-800 border-cyan-200',
                 body: `
-                    <p class="font-semibold text-slate-900">모든 아이는 저마다의 창의성과 학습 적성을 가지고 있습니다.</p>
-                    <p class="text-sm text-slate-600 mt-2"><strong>아동역량검사 & 똑똑한 하마</strong>는 첨단 AI 알고리즘을 활용하여 저학년 아동의 발달 상태와 학습 역량을 다각도로 진단합니다. 단순한 정답 맞추기가 아닌, 탐구력·문제해결력·융합적 사고를 키우는 맞춤형 교구재를 함께 제공합니다.</p>
-                    <h3 class="text-sm font-bold text-slate-900 mt-4 mb-2">주요 교육 가치</h3>
-                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
-                        <li><strong>정밀 데이터 리포트:</strong> 객관적 진단 데이터로 교사와 학부모에게 맞춤 가이드 제공.</li>
-                        <li><strong>교육 격차 해소:</strong> 기초 학력 미달 예방 및 학생별 흥미 기반 맞춤 배움 지원.</li>
-                        <li><strong>창의 융합 교구:</strong> 손으로 직접 만들고 체험하는 오감 만족 에듀테크 콘텐츠.</li>
-                    </ul>
+                    <p class="font-semibold text-slate-900">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다.</p>
+                    <p class="text-sm text-slate-600 mt-2"><strong>뉴스네([지역]교육미래뉴스)</strong>는 교육 현장의 생생한 현장 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 생생하게 다루는 공익 미디어입니다.</p>
                 `,
                 highlights: [
-                    '초등 저학년 맞춤형 역량 진단 알고리즘 적용',
-                    '교육청 및 유치원·초등학교 활용성 우수',
-                    '교사용 학생 관리 통합 데이터보드 제공'
+                    '지역 맞춤형 교육 뉴스 특화 보도',
+                    '교육청 및 지방자치단체 교육 소식 실시간 연계',
+                    '투명한 정보 공유로 교육 공동체 신뢰 구축'
+                ]
+            },
+            {
+                id: 'k-aigrimm',
+                category: '스마트 교육 & AI',
+                brand: '케이닷 아이그림 (K·AI Grimm)',
+                pointText: '상상을 현실로 만드는 생성형 AI<br>동화책 제작 솔루션',
+                title: '상상을 현실로 만드는 생성형 AI 동화책 제작 솔루션, 케이닷 아이그림',
+                subtitle: '키워드와 시나리오 입력으로 완성하는 나만의 AI 그림책 창작 플랫폼 (특허 보유)',
+                excerpt: '어린이의 상상력과 표현력을 극대화하는 생성형 AI 동화책 제작 솔루션! 키워드 및 이야기 시나리오 입력만으로 다채로운 분위기와 시점의 그림을 자동 생성하고, 편집 및 스마트 출판까지 지원합니다.',
+                summaryPoints: [
+                    '키워드 입력만으로 AI 동화책 자동 생성',
+                    '특허 등록 생성형 AI 기술',
+                    'PC·스마트폰·태블릿 어디서나 이용 가능'
+                ],
+                readTime: '4분 읽기',
+                gradient: 'from-indigo-600 via-purple-700 to-slate-900',
+                icon: '🎨',
+                image: 'images/k-aigrimm.jpg',
+                imagePosition: 'right',
+                categoryColor: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">특허 보유</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">제 10-2611923 호</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">생성형 AI</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">딥러닝 기반 이미지 연동</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">Cross-Dev</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">PC·스마트폰·태블릿</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-purple-300 font-black text-lg sm:text-xl">국내 최초</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">세종시립도서관 AI창작소</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            디지털 미래 교육 현장과 공공도서관에서는 단순한 수동적 독서를 넘어, 아이들이 능동적으로 창작에 참여하는 창의적 융합 교육의 요구가 커지고 있습니다. ㈜채움씨앤아이의 <strong>케이닷 아이그림(K·AI Grimm)</strong>은 어린이와 이용자가 직접 작성한 키워드와 시나리오를 바탕으로 인공지능이 고품질 그림책을 자동 생성해주는 <em>특허 등록 생성형 AI 동화책 제작 솔루션</em>입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-600"></i>
+                                <span>케이닷 아이그림(K·AI Grimm)의 4대 혁신 기능 및 경쟁력</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-indigo-100 bg-indigo-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-indigo-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>키워드 & 시나리오 기반 맞춤 AI 그림 생성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    어린이가 입력한 짧은 키워드나 시나리오 문맥을 AI가 정확하게 해석하여 원하는 예술 화풍, 분위기, 캐릭터의 다양한 시점을 반영한 완벽한 컷 이미지를 구현합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-purple-100 bg-purple-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>자유로운 내용 편집 및 스마트 레이아웃 구성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    AI가 그린 이미지와 텍스트 배치를 자유롭게 수정하고 폰트 크기, 문단 구성, 페이지 레이아웃을 몇 번의 클릭으로 조율하여 세공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-sky-100 bg-sky-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-sky-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>스마트 기기 멀티 플랫폼(Cross-Platform) 지원</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    무거운 프로그램 설치 없이 Web 기반으로 작동하며 태블릿, PC, 스마트폰 등 다양한 디바이스 환경에서 최적화된 화면을 제공합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>갤러리 형태의 완성작 관리 & 디지털 라이브러리</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    완성된 동화책은 갤러리 형태로 조회할 수 있으며 PDF 저장, E-Book 공유, 실물 책자 제본 연계 활동을 지원합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-award text-purple-400"></i>
+                                <span>국내 공공도서관 최초 세종시립도서관 '아이(AI) 창작소' 적용 및 독서 창작 실증 완료</span>
+                            </span>
+                            <span class="text-purple-300 font-bold">검증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '생성형 AI 기반 그림책 자동 제작 특허 보유 (특허 제 10-2611923 호)',
+                    '어린이의 시나리오/키워드로 다양한 화풍과 시점의 고품질 그림 연출',
+                    'PC, 스마트폰, 태블릿 등 멀티 디바이스 반응형 웹 서비스 지원',
+                    '세종시립도서관 "아이(AI) 창작소" 등 전국 공공도서관 및 스마트 학교 공식 도입',
+                    '갤러리 방식의 편리한 앨범 관리, 문서 PDF 및 실물 책자 제본 확장 지원'
                 ]
             },
             {
@@ -1289,35 +1190,6 @@
                     '공공기관 및 학교 민원실 배리어 프리 의무화 지원',
                     '주변 웅성거림 및 울림 현상 제거 후 순수 음성 전송',
                     '국제 표준 규격 준수 인프라 구축'
-                ]
-            },
-            {
-                id: 'newsne',
-                category: '미디어 & 소통',
-                brand: '뉴스네 (교육미래뉴스)',
-                pointText: '지역 교육 현안을 투명하게 연결하는<br>공익 미디어 플랫폼',
-                title: '지역 교육 현안을 투명하게 연결하는 공익 미디어 플랫폼',
-                subtitle: '올바른 여론 형성과 교육 현장의 목소리를 대변하는 가교',
-                excerpt: '지역별 맞춤형 교육 이슈, 정책 제안, 학교 소식을 신속하고 공정하게 전달하는 인터넷 언론·신문 미디어 플랫폼입니다.',
-                summaryPoints: [
-                    '지역 교육 현안 신속·공정 보도',
-                    '교육청·지자체 소식 실시간 연계',
-                    '투명한 정보 공유로 교육 공동체 신뢰 구축'
-                ],
-                readTime: '3분 읽기',
-                gradient: 'from-cyan-600 to-slate-800',
-                icon: '📰',
-                image: 'images/newsne.jpg',
-                imagePosition: 'right',
-                categoryColor: 'bg-cyan-100 text-cyan-800 border-cyan-200',
-                body: `
-                    <p class="font-semibold text-slate-900">소통과 신뢰는 건강한 교육 공동체의 뿌리입니다.</p>
-                    <p class="text-sm text-slate-600 mt-2"><strong>뉴스네([지역]교육미래뉴스)</strong>는 교육 현장의 생생한 현장 소식부터 교권 보호, 학생 복지, 미래 교육 정책까지 생생하게 다루는 공익 미디어입니다.</p>
-                `,
-                highlights: [
-                    '지역 맞춤형 교육 뉴스 특화 보도',
-                    '교육청 및 지방자치단체 교육 소식 실시간 연계',
-                    '투명한 정보 공유로 교육 공동체 신뢰 구축'
                 ]
             },
             {
@@ -1426,6 +1298,135 @@
                     '방문 설명부터 완료 보고까지 14단계 표준 시공 프로세스 준수',
                     '국가 공인 배관세척관리사 자격 보유 전문 인력 직접 시공',
                     '전국학교운영위원연합회와 MOU 체결, 300여 협력사·1,900여 클라이언트 시공 실적 보유'
+                ]
+            },
+            {
+                id: 'read-for-school',
+                category: '스마트 교육 & AI',
+                brand: '리드포스쿨 (READ for School)',
+                pointText: '시선 추적 AI 기반 문해력 진단·증진 코스웨어',
+                title: '시선 추적 AI 기반 문해력 진단·증진 코스웨어, 리드포스쿨',
+                subtitle: '별도 장비 없이 스마트기기 카메라로 시선을 분석하여 개인별 맞춤 독해 훈련을 제공하는 혁신 에듀테크',
+                excerpt: '전국 300여 개 학교 도입! 온디바이스 시선추적(Eye-Tracking) 기술로 학생의 읽기 습관과 독해 패턴을 정밀 진단하고, 4단계 AI 맞춤형 훈련 코스와 교사용 LMS를 통해 문해력을 획기적으로 향상시킵니다.',
+                summaryPoints: [
+                    '전국 300여 개 학교 도입',
+                    '카메라만으로 시선추적, 별도 장비 불필요',
+                    '4단계 맞춤 훈련 + 교사용 LMS 제공'
+                ],
+                readTime: '4분 읽기',
+                gradient: 'from-emerald-600 via-teal-700 to-slate-900',
+                icon: '👁️',
+                image: 'images/read-for-school.jpg',
+                imagePosition: 'center',
+                categoryColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                body: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900 text-white p-4 rounded-xl border border-slate-800 text-center">
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">대통령 표창</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">2024 정보문화의 달</div>
+                            </div>
+                            <div class="p-2 sm:border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">CES 혁신상</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">2022·2023 2년 연속</div>
+                            </div>
+                            <div class="p-2 border-r border-slate-800">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">300+ 학교</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">전국 초·중·고 구축</div>
+                            </div>
+                            <div class="p-2">
+                                <div class="text-emerald-400 font-black text-lg sm:text-xl">시선 추적 AI</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5">별도 장비 0개 (HW 불필요)</div>
+                            </div>
+                        </div>
+
+                        <p class="font-semibold text-slate-900 leading-relaxed">
+                            디지털 기기와 숏폼 영상에 익숙해진 미래 세대의 독해력 및 문해력 저하는 최근 교실 현장의 가장 심각한 교육 과제로 대두되고 있습니다. ㈜비주얼캠프의 <strong>리드포스쿨(READ for School)</strong>은 카메라만으로 학생의 눈동자 움직임을 추적하는 독보적 <em>모바일 시선 추적(Mobile Eye-Tracking) 기술</em>과 <em>AI 코스웨어</em>를 결합하여, 학생의 읽기 습관을 과학적으로 분석하고 개인별 맞춤 문해력 훈련을 제공하는 혁신 에듀테크 솔루션입니다.
+                        </p>
+
+                        <div class="space-y-4">
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-eye text-emerald-600"></i>
+                                <span>리드포스쿨(READ for School)의 4대 핵심 기술 및 특징</span>
+                            </h3>
+
+                            <div class="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-emerald-600 text-white flex items-center justify-center text-xs">1</span>
+                                    <span>하드웨어 필요 없는 온디바이스 모바일 시선 추적</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    적외선 카메라나 별도 센서 장비 없이, 학교에 보유된 태블릿PC, 스마트폰, 노트북, 크롬북의 기본 웹캠만으로 정밀하게 시선을 분석합니다 (1.55° 오차 이내). 모든 OS 및 웹 브라우저를 완벽하게 지원합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-teal-100 bg-teal-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-teal-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-teal-600 text-white flex items-center justify-center text-xs">2</span>
+                                    <span>4대 시선 데이터 기반 과학적 문해력 정밀 진단 (RoCAT & ACLA)</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    역행 비율(되돌아 읽는 습관), 시선 고정 시간, 독해 속도, 시폭(한번에 보는 글자수) 등 4대 핵심 지표를 정밀 측정합니다. EBS 계약 지문과 컴퓨터 적응형 테스트(CAT) 기법을 활용합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-cyan-100 bg-cyan-50/50 space-y-2">
+                                <div class="flex items-center gap-2 text-cyan-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-cyan-600 text-white flex items-center justify-center text-xs">3</span>
+                                    <span>체계적인 4단계 맞춤 훈련 모듈 & AI 튜터 피드백</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    [지문 읽기 ➔ 어휘 학습 ➔ 객관식/추론 문제 풀이 ➔ AI 튜터 피드백]으로 이어지는 선순환 구조를 제공하며, AI 튜터가 요약문 및 서술형 답변을 실시간 교정합니다.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                                <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                                    <span class="w-6 h-6 rounded-md bg-slate-700 text-white flex items-center justify-center text-xs">4</span>
+                                    <span>교사용 LMS & 지문 업로드 시 AI 문제 자동 생성</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed pl-8">
+                                    LMS 대시보드로 학생별 시선 패턴(Gaze Pattern)과 학습 성과를 시각적으로 확인하며, 교사가 단원 지문 입력 시 AI가 맞춤형 문제를 자동 생성합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">국내 최고 대학 교수진 공동 연구 및 교육 효과 실증</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">서울대학교 교육심리학과</div>
+                                    <div class="font-bold text-slate-800">신종호 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">학습자의 읽기 습관, 시선패턴, 이해도 분석 및 피드백 체계 구축</p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">한양대학교 국어교육과</div>
+                                    <div class="font-bold text-slate-800">조병영 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">시선데이터 및 독해검사 데이터 기반 맞춤형 학습 시스템 구현</p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-slate-200 shadow-sm space-y-1">
+                                    <div class="font-bold text-emerald-700">이화여자대학교 국어교육과</div>
+                                    <div class="font-bold text-slate-800">서혁 교수 연구진</div>
+                                    <p class="text-[11px] text-slate-500">콘텐츠 검수, 학년별/난이도별 지문 및 문제 세트 훈련 배치</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 text-slate-200 rounded-xl text-xs flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-chart-line text-emerald-400"></i>
+                                <span>경남 지역 중학교 3개월 실증 결과 정답률 평균 15% 증가 입증 & 전국 300여 개 학교 구축</span>
+                            </span>
+                            <span class="text-emerald-400 font-bold">검증 완료</span>
+                        </div>
+                    </div>
+                `,
+                highlights: [
+                    '별도 하드웨어 없이 모바일/태블릿/PC 카메라만으로 온디바이스 시선추적(Eye-Tracking) 구현',
+                    '2024 정보문화의 달 대통령 표창 & CES 혁신상 2년 연속 수상으로 검증된 독보적 기술력',
+                    '시선 데이터(역행 비율, 고정 시간, 독해 속도, 시폭) 기반 4단계 AI 문해력 진단 및 맞춤 훈련',
+                    'EBS 계약 지문 기반 RoCAT 진단 및 교사 직접 지문 업로드 시 AI 문제 자동 생성 커리큘럼',
+                    '서울대·한양대·이화여대 교수진 공동 연구 및 전국 300여 개 학교 실증 완료 (정답률 15% 상승)'
                 ]
             },
             {
