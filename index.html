@@ -92,19 +92,17 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
-                <a href="#about" class="hover:text-brand-600 transition-colors">회사소개</a>
-                <a href="#values" class="hover:text-brand-600 transition-colors">핵심가치</a>
-                <a href="#solutions" onclick="filterCategory('전체')" class="hover:text-brand-600 transition-colors">5대 솔루션</a>
-                <a href="#process" class="hover:text-brand-600 transition-colors">도입절차</a>
-            </nav>
+            <!-- Desktop Navigation + Action Buttons (right-aligned group) -->
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                    <a href="#about" class="hover:text-brand-600 transition-colors">회사소개</a>
+                    <a href="#solutions" onclick="filterCategory('전체')" class="hover:text-brand-600 transition-colors">제품소개</a>
+                    <a href="#process" class="hover:text-brand-600 transition-colors">도입절차</a>
+                </nav>
 
-            <!-- Action Buttons -->
-            <div class="flex items-center gap-3">
                 <button onclick="openInquiryModal()" class="px-4 py-2.5 rounded-xl bg-brand-900 text-white text-xs sm:text-sm font-semibold hover:bg-brand-800 shadow-md shadow-brand-900/10 transition-all flex items-center gap-2">
                     <i class="fa-regular fa-paper-plane text-xs"></i>
-                    <span>도입 문의하기</span>
+                    <span>문의하기</span>
                 </button>
             </div>
         </div>
@@ -123,31 +121,15 @@
 
         <div class="max-w-7xl mx-auto relative z-10 text-center sm:text-left">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-brand-100 text-xs sm:text-sm font-medium border border-white/15 backdrop-blur-md mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    공익과 교육을 위한 종합 컨설팅 미디어 솔루션
-                </div>
-                
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
                     공익을 위한 혁신,<br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-200 to-white">미래를 위한 책임</span>
                 </h1>
                 
-                <p class="text-slate-300 text-base sm:text-xl leading-relaxed mb-8 font-light">
+                <p class="text-slate-300 text-base sm:text-xl leading-relaxed mb-10 font-light">
                     "더 나은 내일을 위해, 교육과 사회의 건강한 생태계를 디자인합니다."<br class="hidden sm:inline">
                     주식회사 이음은 안전·교육·복지·미디어를 잇는 가치 중심 통합 솔루션 그룹입니다.
                 </p>
-
-                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mb-10">
-                    <a href="#solutions" class="px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-lg shadow-brand-500/30 transition-all flex items-center gap-2">
-                        <span>5대 솔루션 살펴보기</span>
-                        <i class="fa-solid fa-arrow-down text-xs"></i>
-                    </a>
-                    <button onclick="openInquiryModal()" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 backdrop-blur-md transition-all flex items-center gap-2">
-                        <i class="fa-regular fa-file-pdf text-xs"></i>
-                        <span>소개서 & 카탈로그 신청</span>
-                    </button>
-                </div>
 
                 <!-- Key Stat Badges -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10 text-xs sm:text-sm">
@@ -177,18 +159,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Company Philosophy</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                    상생과 책임을 바탕으로 사회적 가치를 디자인합니다
-                </h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
-                    주식회사 이음은 우리 사회의 가장 본질적인 영역인 '교육'과 '공공성'의 가치를 높이는 데 전념하는 종합 컨설팅 그룹입니다.
+                <p class="text-slate-900 text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 leading-tight">
+                    교육과 공공성, 두 가치를 잇는 종합 컨설팅 회사 <span class="text-brand-600">이음</span>
                 </p>
             </div>
 
-            <!-- Philosophy & Mission/Vision Content Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <!-- Left: Corporate Philosophy Card -->
-                <div class="lg:col-span-7 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between">
+            <!-- Corporate Philosophy Card -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
                     <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-brand-500/20 blur-2xl"></div>
                     <div>
                         <div class="flex items-center gap-3 mb-6">
@@ -205,42 +183,6 @@
                         <p class="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
                             첨단 AI 기술과 지능형 콘텐츠를 통해 미래 세대에게는 창의적이고 몰입감 있는 교육 환경을, 공공 현장에는 더 안전하고 스마트한 서비스를 제공하고자 합니다.
                         </p>
-                    </div>
-
-                    <!-- Placeholder Image/Graphic Container (Ready for photo additions) -->
-                    <div class="mt-8 p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
-                        <p class="text-xs text-slate-300 leading-relaxed italic">
-                            "우리는 하나의 가치 아래, 안전·혁신·복지·교육·미디어의 5대 영역에서 사회적 책임을 다하는 전문 브랜드들과 함께 통합 솔루션을 구축해 가고 있습니다."
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Right: Mission & Vision Cards -->
-                <div class="lg:col-span-5 flex flex-col gap-6 justify-between">
-                    <!-- Mission Card -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-4">
-                                🎯 미션 (Mission)
-                            </div>
-                            <h3 class="text-xl font-extrabold text-slate-900 mb-2">공공의 안전과 교육의 질적 향상</h3>
-                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                학교와 공공기관이 직면한 당면 과제(안전, 혁신, 복지, 소통)를 정확히 진단하고, 이를 해결할 수 있는 최적의 공익적 솔루션을 컨설팅하고 공급합니다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Vision Card -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold mb-4">
-                                🚀 비전 (Vision)
-                            </div>
-                            <h3 class="text-xl font-extrabold text-slate-900 mb-2">가치 중심 통합 솔루션 그룹</h3>
-                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                대한민국 교육·공공 환경 개선을 선도하며 단순한 비즈니스를 넘어, 우리 사회의 지속 가능한 발전과 사회적 가치 실현에 기여하는 가장 신뢰받는 파트너가 됩니다.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -319,17 +261,17 @@
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">5 Business Domains</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                이음 5대 핵심 솔루션
+                제품소개
             </h2>
             <p class="text-slate-600 text-sm sm:text-base mt-3">
-                학교와 관공서 현장에 필요한 검증된 전문 브랜드 솔루션을 탐색해 보세요.
+                상생과 책임을 바탕으로 사회적 가치를 디자인합니다
             </p>
         </div>
 
-        <!-- Category Filter & Search Toolbar -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200">
+        <!-- Category Filter Toolbar -->
+        <div class="flex flex-col items-center gap-4 mb-10 pb-6 border-b border-slate-200">
             <!-- Category Tabs -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="categoryTabs">
+            <div class="flex items-center justify-center flex-wrap gap-2" id="categoryTabs">
                 <button onclick="filterCategory('전체')" class="category-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-brand-900 text-white transition-all shadow-sm">
                     전체 보기
                 </button>
@@ -349,12 +291,6 @@
                     미디어 & 소통
                 </button>
             </div>
-
-            <!-- Search Bar -->
-            <div class="relative w-full md:w-72">
-                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="솔루션 또는 키워드 검색..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
-            </div>
         </div>
 
         <!-- Filter Status Message -->
@@ -373,6 +309,27 @@
             <h3 class="text-base font-semibold text-slate-700">해당 조건의 솔루션 글이 없습니다</h3>
             <p class="text-sm text-slate-500 mt-1">다른 검색어나 카테고리를 선택해 보세요.</p>
             <button onclick="resetFilter()" class="mt-4 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold hover:bg-slate-200">전체보기로 돌아가기</button>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Direct Contact Banner Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-slate-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+                <div class="max-w-2xl text-center md:text-left">
+                    <span class="inline-block text-xs font-bold px-3 py-1 bg-brand-500/30 text-cyan-200 rounded-full mb-3 border border-brand-400/30">B2G / B2B 전문 컨설팅</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">맞춤형 제안서와 견적이 필요하신가요?</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-2 font-light">
+                        사업별 세부 카탈로그, 스펙 안내서, 무료 샘플 및 견적을 빠르게 전달해 드립니다.
+                    </p>
+                </div>
+                <div class="shrink-0 w-full sm:w-auto">
+                    <button onclick="openInquiryModal()" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-extrabold text-sm rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span>지금 솔루션 자료 신청하기</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -432,27 +389,6 @@
                     <p class="text-xs text-slate-400 leading-relaxed">
                         교사용 LMS 대시보드 제공 및 전국 지점망 A/S를 통한 사후 관리를 보장합니다.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: Direct Contact Banner Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-slate-900 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
-                <div class="max-w-2xl text-center md:text-left">
-                    <span class="inline-block text-xs font-bold px-3 py-1 bg-brand-500/30 text-cyan-200 rounded-full mb-3 border border-brand-400/30">B2G / B2B 전문 컨설팅</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">학교 및 관공서 맞춤형 제안서와 견적이 필요하신가요?</h2>
-                    <p class="text-xs sm:text-sm text-slate-300 mt-2 font-light">
-                        사업별 세부 카탈로그, 스펙 안내서, 무료 샘플 및 견적을 빠르게 전달해 드립니다.
-                    </p>
-                </div>
-                <div class="shrink-0 w-full sm:w-auto">
-                    <button onclick="openInquiryModal()" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-extrabold text-sm rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-paper-plane"></i>
-                        <span>지금 솔루션 자료 신청하기</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -608,7 +544,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
                 <!-- Brand Info -->
-                <div class="md:col-span-5 space-y-3">
+                <div class="md:col-span-7 space-y-3">
                     <div class="flex items-center gap-2 text-white font-extrabold text-base">
                         <img src="images/logo.png" alt="이음 로고" class="w-9 h-9 object-contain">
                         주식회사 이음 (IEUM)
@@ -619,20 +555,8 @@
                     </p>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="md:col-span-3 space-y-2">
-                    <h4 class="text-white font-bold mb-3">5대 핵심 사업 영역</h4>
-                    <ul class="space-y-1.5">
-                        <li><a href="#solutions" onclick="filterCategory('스마트 교육 & AI')" class="hover:text-white transition-colors">스마트 교육 & AI (리드포스쿨 / K·AI Grimm)</a></li>
-                        <li><a href="#solutions" onclick="filterCategory('디지털 청소년 보호')" class="hover:text-white transition-colors">디지털 청소년 보호 (락킷)</a></li>
-                        <li><a href="#solutions" onclick="filterCategory('안전 & 환경')" class="hover:text-white transition-colors">안전 & 환경 (에스솔루션 / 허니비)</a></li>
-                        <li><a href="#solutions" onclick="filterCategory('포용 & 복지')" class="hover:text-white transition-colors">포용 & 복지 (텔레코일존)</a></li>
-                        <li><a href="#solutions" onclick="filterCategory('미디어 & 소통')" class="hover:text-white transition-colors">미디어 & 소통 (교육미래위원회)</a></li>
-                    </ul>
-                </div>
-
                 <!-- Contact Details -->
-                <div class="md:col-span-4 space-y-2">
+                <div class="md:col-span-5 space-y-2">
                     <h4 class="text-white font-bold mb-3">고객지원</h4>
                     <p><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> 주식회사 이음 (IEUM)</p>
                     <p><i class="fa-solid fa-envelope text-slate-500 mr-1.5"></i> 공식 문의: herei6027@naver.com</p>
@@ -1939,18 +1863,9 @@
         }
 
         // Search Handler
-        function handleSearch() {
-            const input = document.getElementById('searchInput');
-            currentSearchQuery = input.value.trim();
-            renderPosts();
-        }
-
         // Reset Filter
         function resetFilter() {
             currentCategory = '전체';
-            currentSearchQuery = '';
-            const input = document.getElementById('searchInput');
-            if (input) input.value = '';
             filterCategory('전체');
         }
 
