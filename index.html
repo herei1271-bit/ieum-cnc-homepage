@@ -111,8 +111,8 @@
     <!-- Hero Banner Section -->
     <section class="text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <img src="images/hero.jpg" alt="이음" class="absolute inset-0 w-full h-full object-cover" style="object-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-900 via-brand-900 to-slate-900" style="opacity: 0.5;"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-600 via-brand-500 to-brand-700" style="opacity: 0.55;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-900/85 via-brand-800/40 to-transparent"></div>
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
             <div class="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-cyan-400 blur-3xl"></div>
@@ -158,7 +158,6 @@
     <section id="about" class="py-20 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Company Philosophy</span>
                 <p class="text-slate-900 text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 leading-tight">
                     교육과 공공성, 두 가치를 잇는 종합 컨설팅 회사 <span class="text-brand-600">이음</span>
                 </p>
@@ -166,90 +165,31 @@
 
             <!-- Corporate Philosophy Card -->
             <div class="max-w-4xl mx-auto">
-                <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
-                    <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-brand-500/20 blur-2xl"></div>
+                <div class="bg-white border border-slate-200 text-slate-900 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+                    <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-brand-100 blur-2xl"></div>
                     <div>
                         <div class="flex items-center gap-3 mb-6">
                             <img src="images/logo.png" alt="이음 로고" class="w-10 h-10 object-contain">
                             <div>
-                                <h3 class="font-extrabold text-xl text-white">경영 철학 (Corporate Philosophy)</h3>
-                                <p class="text-xs text-brand-300">주식회사 이음 (IEUM)</p>
+                                <h3 class="font-extrabold text-xl text-slate-900">경영 철학 (Corporate Philosophy)</h3>
+                                <p class="text-xs text-brand-600">주식회사 이음 (IEUM)</p>
                             </div>
                         </div>
 
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                             우리는 상생과 책임을 기업의 존재 이유로 삼고, 단순한 기술이나 제품의 공급을 넘어 아이들이 안전하게 자랄 수 있는 학교 환경을 만들고, 소외되는 이 없이 모두가 소통할 수 있는 건강한 사회적 기반을 다지는 것을 소명으로 여깁니다.
                         </p>
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
                             첨단 AI 기술과 지능형 콘텐츠를 통해 미래 세대에게는 창의적이고 몰입감 있는 교육 환경을, 공공 현장에는 더 안전하고 스마트한 서비스를 제공하고자 합니다.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 2: Core Values Section -->
-    <section id="values" class="py-20 bg-slate-100/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Core Values</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                    이음 4대 핵심 가치
-                </h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-3">
-                    공공·교육 전문 컨설팅 기업으로서 당사가 지향하는 확고한 4가지 지표입니다.
-                </p>
-            </div>
-
-            <!-- 4 Column Grid for Core Values -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Value 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
-                        01
+                        <div class="flex justify-end mt-6">
+                            <button onclick="openCompanyModal()" class="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-white hover:border-brand-200 transition-all shadow-sm">
+                                <i class="fa-solid fa-compass text-brand-600"></i>
+                                <span>회사소개</span>
+                            </button>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">안전과 보호</h3>
-                    <p class="text-xs text-brand-600 font-semibold mb-2">Safety & Protection</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        화재 예방(에스솔루션), 스마트폰 과의존 방지(락킷), 깨끗한 위생 환경(허니비)을 통해 미래 세대가 가장 안심할 수 있는 공간을 제공합니다.
-                    </p>
-                </div>
-
-                <!-- Value 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
-                        02
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">미래 교육과 혁신</h3>
-                    <p class="text-xs text-brand-600 font-semibold mb-2">Future Education</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        시선추적 AI(리드포스쿨) 및 생성형 AI(케이닷 아이그림)를 통해 교육의 질을 높이고 공평한 맞춤 배움의 기회를 제공합니다.
-                    </p>
-                </div>
-
-                <!-- Value 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
-                        03
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">상생과 포용</h3>
-                    <p class="text-xs text-brand-600 font-semibold mb-2">Inclusion & Welfare</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        영유아 아동역량검사부터 취약계층 보청기 지원(텔레코일존)까지, 단 한 사람도 소외되지 않는 따뜻한 교육·복지 인프라를 실현합니다.
-                    </p>
-                </div>
-
-                <!-- Value 4 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-black mb-4 group-hover:scale-110 transition-transform">
-                        04
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">소통과 신뢰</h3>
-                    <p class="text-xs text-brand-600 font-semibold mb-2">Communication & Trust</p>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        지역 맞춤형 교육 미디어 플랫폼(교육미래위원회)을 통해 올바른 여론을 형성하고, 지역 사회와 교육 현장을 투명하게 연결합니다.
-                    </p>
                 </div>
             </div>
         </div>
@@ -259,8 +199,7 @@
     <section id="solutions" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
         
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">5 Business Domains</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 제품소개
             </h2>
             <p class="text-slate-600 text-sm sm:text-base mt-3">
@@ -337,8 +276,7 @@
     <section id="process" class="py-20 bg-slate-900 text-white border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/15">Step by Step Process</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                     맞춤형 원스톱 도입 및 컨설팅 절차
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base mt-3">
@@ -393,6 +331,77 @@
             </div>
         </div>
     </section>
+
+    <!-- Company Info Modal (Mission / Vision / Core Values) -->
+    <div id="companyModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden my-auto">
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                <h2 class="text-lg font-extrabold text-slate-900">회사소개</h2>
+                <button onclick="closeCompanyModal()" class="w-8 h-8 rounded-full bg-white hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <div class="p-6 sm:p-8 overflow-y-auto space-y-8">
+                <!-- Mission & Vision (narrative) -->
+                <div class="space-y-4">
+                    <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        이음은 학교와 공공기관이 직면한 당면 과제(안전, 혁신, 복지, 소통)를 정확히 진단하고, 이를 해결할 수 있는 최적의 공익적 솔루션을 컨설팅하고 공급함으로써 <strong>공공의 안전과 교육의 질적 향상</strong>을 추구합니다.
+                    </p>
+                    <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        대한민국 교육·공공 환경 개선을 선도하며 단순한 비즈니스를 넘어, 우리 사회의 지속 가능한 발전과 사회적 가치 실현에 기여하는 <strong>가장 신뢰받는 가치 중심 통합 솔루션 그룹</strong>이 되는 것이 이음이 그리는 미래입니다.
+                    </p>
+                </div>
+
+                <!-- Core Values -->
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-4">이음 4대 핵심 가치</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                            <div class="flex items-start gap-3 mb-2">
+                                <span class="text-3xl">🛡️</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900">안전과 보호</h4>
+                                    <p class="text-xs text-brand-600 font-semibold">Safety & Protection</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed">화재 예방, 스마트폰 과의존 방지, 깨끗한 위생 환경을 통해 미래 세대가 가장 안심할 수 있는 공간을 제공합니다.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                            <div class="flex items-start gap-3 mb-2">
+                                <span class="text-3xl">💡</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900">미래 교육과 혁신</h4>
+                                    <p class="text-xs text-brand-600 font-semibold">Future Education</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed">시선추적 AI 및 생성형 AI 기술을 통해 교육의 질을 높이고 공평한 맞춤 배움의 기회를 제공합니다.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                            <div class="flex items-start gap-3 mb-2">
+                                <span class="text-3xl">🤝</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900">상생과 포용</h4>
+                                    <p class="text-xs text-brand-600 font-semibold">Inclusion & Welfare</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed">영유아 역량 검사부터 취약계층 보청 지원까지, 단 한 사람도 소외되지 않는 따뜻한 교육·복지 인프라를 실현합니다.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                            <div class="flex items-start gap-3 mb-2">
+                                <span class="text-3xl">💬</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900">소통과 신뢰</h4>
+                                    <p class="text-xs text-brand-600 font-semibold">Communication & Trust</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed">지역 맞춤형 교육 미디어 플랫폼을 통해 올바른 여론을 형성하고, 지역 사회와 교육 현장을 투명하게 연결합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Full Article Modal Reader -->
     <div id="articleModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
@@ -1940,6 +1949,20 @@
 
         function closeArticleModal() {
             const modal = document.getElementById('articleModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function openCompanyModal() {
+            const modal = document.getElementById('companyModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCompanyModal() {
+            const modal = document.getElementById('companyModal');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
             document.body.style.overflow = '';
